@@ -2,3 +2,31 @@
 Version:		1.0.1
 Author:		Travel Dana */
  /*CSS  */
+ .container .header-line{
+    width: 50px;
+    margin: 0px auto;
+}
+.container .anhchung{
+    display: flex;
+    width: 30px;
+    height: 50px;
+    width: 60px;
+    height: 40px;
+}
+h1{
+    padding: 50px;
+    margin-left: 100;
+    text-align: center;
+}
+.container .anh:hover{
+    color:black;
+    background-color:brown;
+    display: block;
+}
+.anhchung ul li{
+    padding: auto;
+    align-content: center;
+}
+.tai{
+ text-align: center;
+}
