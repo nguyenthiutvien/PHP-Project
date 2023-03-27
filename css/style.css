@@ -1,4 +1,192 @@
-/* Theme Name:		Travel Dana - HTML Template
-Version:		1.0.1
-Author:		Travel Dana */
- /*CSS  */
+
+.container-fluid {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    background-size: 100%;
+    background-image: url(https://transviet.com.vn/images/Khuyen-Mai/Pictures/cam_nang_du_lich/LUU-Y-KHI-DI-DU-LICH/dulichtheotour-transviet00.jpg);
+}
+
+.blackground-fluid {
+    background-color: #696969;
+    width: 2000px;
+    height: 300px;
+}
+
+.col-lg-3 {
+    color: aliceblue;
+    margin-top: 25px;
+    padding-top: 50px;
+}
+
+.icon {
+    border: 1px solid orange;
+    width: 30px;
+    color: orange;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    margin-bottom: auto;
+    left: 100px;
+}
+
+.img-fluid {
+    margin-top: 10px;
+    width: auto;
+    height: 300px;
+}
+.img-fluid .anh {
+    width: 1980px;
+    height: 850px;
+    margin-left: auto;
+}
+.header {
+    display: flex;
+    position: relative;
+}
+.containers h2 {
+    padding-top: 130px;
+    padding-left: 550px;
+}
+
+.heading-line {
+    color: #faa61a;
+}
+
+.heading-line {
+    background-color: orange;
+}
+
+.img-fluid .img {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.img-fluid {
+    margin-top: 10px;
+    width: auto;
+    height: 300px;
+}
+
+.heading-line {
+    width: 60px;
+    height: 20px;
+    margin-left: 600px;
+   
+}
+
+.star{
+    color: #faa61a;
+}
+
+.card-title, h4, p,
+.star {
+    text-align: center;
+}
+
+.title {
+    background-color: black;
+    color: aliceblue;
+    margin-top: -17px;
+    width: 413px;
+    margin-left: -17px;
+
+}
+
+.ba h2 {
+    text-align: center;
+   
+}
+.ba{
+  padding-top: 70px;
+
+}
+.header-line{
+        width: 70px;
+        height: 20px;
+        margin-left: 760px;
+        color: #faa61a;
+}
+.col-lg-6{
+    
+    
+    padding: 10px;
+}
+.text-body {
+    display: flex;
+    border: 1px solid #696969;
+}
+.row {
+    display: flex;
+    
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-btn-btn{
+  background-color: orange;
+  color: aliceblue;
+  border: none; 
+  width: 150px;
+  height: 50px;
+  background-color:orange;margin-left:auto;
+  margin-right:auto;
+  display:block;
+  margin-top:10%;
+  margin-bottom:7% ;
+  justify-items: center;
+  
+}
+
+.but{
+ 
+  background-color: orange;
+  color: aliceblue;
+  border: none;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  background-color:orange;margin-left:auto;
+  margin-right:auto;
+  display:block;
+  margin-top:10%;
+  margin-bottom:7% ;
+  justify-items: center;
+
+}
+.but:hover{
+  background-color: black;
+}
+.btn-btn-btn:hover{
+  background-color: black;
+}
+.row .col-lg-4:hover{
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+
+}
+.row .col-lg-6:hover{
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+
+}
+.t{
+  background-color: white;
+}
+.img .t{
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  padding: 6px 12px;
+}
+.img .t p{
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2d2d2d;
+
+}
