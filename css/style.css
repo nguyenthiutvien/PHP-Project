@@ -1,0 +1,112 @@
+
+ .photo-img{
+    width: 1509px;
+    height: 450px;
+    margin-left:-200px ;
+}
+#Video .Hinh_video{
+    width: 1662px;
+    height: 500px;
+}
+
+
+.icon-play{
+    top: 290px;
+    position: absolute;
+    left: 650px;
+}
+
+#Video h2{
+    top: 120px;
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+    right: 680px;
+    font-weight: 30px;
+}
+
+#Video h6{
+    top: 190px;
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+    right: 500px;
+}
+
+
+
+.heading-line{
+    width: 100px;
+    height: 2px;
+    background-color: #FAA61A;
+}
+.page-heading{
+    text-align: center;
+}
+.card-img-top{
+   margin-left: 50px;
+   margin-top: 20px;
+}
+
+.back-ground{
+    margin-top: 20px;
+    background-color:  #FAA61A;
+    height: 50px;
+    margin-left: -20px;
+    margin-right: -20px;
+    
+    height: 80px;
+}
+
+
+.price{
+    margin-top: 20px;
+    background-color: black;
+    height: 50px;
+    margin-left: -20px;
+    margin-right: -20px;
+    color: aliceblue;
+    
+}
+
+.fa-plane,.fa-star{
+    color: #FAA61A;
+}
+
+.btn-orange{
+    background-color: #FAA61A;
+    width: 150px;
+    color: aliceblue;
+    margin-bottom: -50px;
+}
+
+#highlights{
+    position:relative ;
+    margin-top: 150px;
+    background-color: grey;
+    height: 300px;
+}
+
+.highlight-box{
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    bottom: -60px;
+}
+
+.highlight{
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    bottom: -60px;
+}
+ .fa-taxi, .fa-ship, .fa-plane-departure{
+    color:#FAA61A;
+   font-size: 50px;
+   position: relative;
+   bottom: -140px;
+    
+}
+
+/* end tour */
+
