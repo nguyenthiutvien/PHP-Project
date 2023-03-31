@@ -1,4 +1,381 @@
-/* Theme Name:		Travel Dana - HTML Template
-Version:		1.0.1
-Author:		Travel Dana */
- /*CSS  */
+
+:root{
+  --orange:#ffa500;
+}
+section{
+  padding:2rem 9%;
+}
+.heading span{
+  font-size: 3.5rem;
+  background:rgba(252, 164, 0, 0.2);
+  color:var(--orange);
+  border-radius: .5rem;
+  padding:.2rem 1rem;
+}
+.heading span.space{
+  background:none;
+}
+.btn{
+  display: inline-block;
+  margin-top: 3rem;
+  background:var(--orange);
+  color:#fff;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.btn:hover{
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+}
+
+
+
+.book .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+.book .row .image{
+  flex:1 1 40rem;
+}
+.book .row .image img{
+  width:100%;
+}
+
+.book .row form{
+  flex:1 1 40rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+
+.book .row form .inputBox{
+  padding:.5rem 0;
+}
+
+.book .row form .inputBox input{
+  width:100%;
+  padding:1rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+}
+
+.book .row form .inputBox h3{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#ffffff;
+}
+
+.box-container .box:hover{
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+
+
+/* ************packages************** */
+
+
+.packages .box-container{
+  display: flex;
+  gap:2rem;
+  max-width: 2000px;
+}
+.packages h1{
+   text-align: center;
+    margin-bottom: 50px;
+    color: var(--main-color);
+    position: relative;
+}
+.packages h1::before{
+  position:absolute;
+    content: "";
+    height: 5px;
+    width: 150px;
+    background-color:rgb(194, 85, 8);
+    border-radius: 5px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.packages h1::after{
+    position:absolute;
+    content: "\2618";
+    width: 35px;
+    height: 15px;
+    color: red;
+    background-color: rgb(241, 244, 246);
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.packages .box-container .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+.packages .box-container .box img{
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+.packages .box-container .box .content{
+  padding:1.2rem;
+}
+.packages .box-container .box .content h3 i{
+  color:var(--orange);
+}
+.packages .box-container .box .content p{
+  font-size:1.2rem;
+  color:#666;
+  padding:rem 0;
+}
+
+
+.packages .box-container .box .content .stars i{
+  font-size:1.2rem;
+  color:var(--orange);
+}
+
+
+.packages .box-container .box .content .price{
+  font-size: 1.2rem;
+  color:#333;
+  padding-top: 1rem;
+}
+.packages .box-container .box .content .price span{
+  color:#868282;
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
+
+.view-all.text-center {
+  text-align: center;
+  text-decoration: none;
+}
+
+.title-content{
+    margin-top: -25px;
+   background-color: black;
+   width:400%;
+   padding: 12px;
+   margin-left: -20px;
+   color: #fff;
+}
+
+
+/* ***************************************************** */
+
+
+html,body{
+    height:100%;
+    position:relative;
+}
+.page-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+
+.page-heading h1{
+    text-transform: capitalize;
+    font-weight:bold;
+    margin-bottom:14px;
+}
+
+
+.page-heading .heading-line{
+    width:50px;
+    margin:3px auto;
+}
+
+.section-padding{
+    padding-top:12px;
+    padding-bottom:12px;
+}
+.row{
+    display: flex;
+    max-width: 2000px;
+}
+.main-img img{
+    width:100%;
+   
+}
+
+
+
+
+
+/************* TESTIMONIALS *************/
+
+
+#testimonials{
+  margin-top:50px;
+  text-align: center;
+}
+.lo-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    height: calc(100% - 38px);
+    transition: .5s;
+  }
+  
+  .lo-item img {
+    transition: .5s;
+  }
+  
+  .lo-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .lo-item .coment{
+    font-size: 20px;
+  }
+  .lo-item:hover {
+    height: 100%;
+  }
+  .lo-item:hover rating{
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    height: calc(100% - 35px);
+    transition: .5s;
+  }
+  .img-fluid{
+    border-radius:50%;
+    width: 250px;
+    height: 250px;
+    margin-left: 30px;
+  }
+  .heading-line{
+    width:50px;
+  }
+
+  .row{
+    
+    padding-top: 30px;
+    justify-content: center;
+  }
+  .mb-0{
+    font-size: 20px;
+    text-align: center;
+  }
+  .rating{
+    color:var(--orange);
+  }
+/* **************************************** */
+
+/**************OUR LATEST BLOGS************** */
+.latest-block{
+    margin:4px 40px;
+    background-color: #ece6e6;
+}
+
+.latest-info{
+    padding:4px 30px;
+    margin-top: -4px;
+    background-color: black;
+    color: #d6cdcd;
+}
+
+.latest-info li{
+    font-size:12px;
+}
+
+.latest-info li .fa{
+    font-size:14px;
+    margin-right:10px;
+}
+
+.latest-info li .author{
+    float:right;
+    padding-left: 10px;
+    font-size:14px;
+   
+}
+
+.latest-desc a{
+    font-size:18px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.latest-desc p{
+    margin-top:18px;
+    font-weight:normal;
+    font-size:14px;
+    text-transform:none;
+    line-height:1.4em;
+    padding-left: 10px;
+}
+
+.col-md-4:hover{
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-15px);
+}
+.fa-angle-right{
+  padding-left: 450px;
+
+}
+
+
+/*********************container-fluid********************** */
+.title-item{
+  color: #060606;
+  position: relative;
+  bottom: -300px;
+  font-size: 40px;
+  text-align: center;
+}
+.title-item-1{
+  font-size: 20px;
+  color: #0d0c0c;
+  position: relative;
+  bottom: -300px;
+  text-align: center;
+}
+
+
+.form-group{
+  color: #443350;
+  position: relative;
+  text-align: center;
+  margin-top: -200px;
+  margin-left: -20%;
+}
+.inputemail{
+  width: 400px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+
+}
+.iconemail{
+  position: absolute;
+  font-size:400px ;
+  margin-top: 4px;
+}
+
+.container-fluid{
+  margin-top: -100px;
+}
+
+.btn1{
+  position: absolute;
+  font-size: 100%;
+  display: inline-block;
+  margin-top: -0.25rem;
+  background: var(--orange);
+  color: #fff;
+  padding: .3rem .3rem;
+  border: .2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+/* ********************* */
+
+
