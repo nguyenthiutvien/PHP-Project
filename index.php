@@ -34,17 +34,7 @@
     <!-- Magnific Gallery -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- <script src="js/index.js"></script> -->
-    <style>
-        .add {
-            display: flex;
-        }
-
-        #home-links {
-            margin: 0 0 0 300px;
-            position: absolute;
-            background-color: black;
-        }
-    </style>
+ 
 </head>
 
 
@@ -100,7 +90,27 @@
                             <li><a href="cart.php" id="thanh4"><span><i class="fa fa-shopping-cart"></i></span>Cart</a>
                             </li>
                             <li>
-                                
+                            <form>
+                                    <ul class="list-inline">
+                                        
+                                        
+                                        <li>
+                                            <a id="ten"><span><i class="fa fa-circle blackiconcolor"></i></span>
+                                                <?php
+                                                include('login_set.php');
+                                                $ten = new user();
+                                                $rows = $ten->fetch();
+                                                if (!empty($rows)) {
+                                                    foreach ($rows as $row) {
+                                                        $name = $row['activity_name'];
+                                                    }
+                                                    echo $name;
+                                                }
+                                                ?></a>
+                                        </li>
+                                    </ul>
+
+                                </form>   
                             </li>
 
                         </ul>
@@ -116,7 +126,24 @@
     <!-- end container -->
 
     <!-- end top-bar -->
-   
+    <script type="text/javascript">
+        function inten() {
+            document.getElementById("ten").style.display = "block";
+            document.getElementById("thanh3").style.display = "block";
+            document.getElementById("thanh4").style.display = "block";
+            document.getElementById("thanh1").style.display = "none";
+            document.getElementById("thanh2").style.display = "none";
+        }
+        <?php
+        $rows = $ten->fetch();
+        if (!empty($rows)) {
+            foreach ($rows as $row) {
+                $name = $row['activity_name'];
+            }
+            echo "inten();";
+        }
+        ?>
+    </script>
        
     </script>
     <nav class="navbar navbar-default main-navbar navbar-custom navbar-black" id="mynavbar-1">
@@ -153,17 +180,17 @@
                             
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs</a>
+                    <li class="dropdown"><a href="blog.php" >Blogs</a>
                        
                     </li>
                   
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US</a>
+                    <li class="dropdown"><a href="#" >ABOUT US</a>
                         
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTACT</a>
+                    <li class="dropdown"><a href="#">CONTACT</a>
                        
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<span><i class="fa fa-angle-down"></i></span></a>
+                    <li class="dropdown"><a href="#" >Account<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="login.php">Login Homepage</a></li>
                             <li><a href="registration.php">Registration Homepage</a></li>
@@ -617,6 +644,8 @@
     </section>
     <!-- end flexslider-container -->
 
+
+
    <!--=============== TOUR OFFERS ===============-->
    <section id="tour-offers" class="section-padding">
         <div class="container">
@@ -656,7 +685,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="booking_offer.php?id=' . $id_offer . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                    <a href="booking.php?id=' . $id_offer . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                 </div>
                             </div>
                         </div>
