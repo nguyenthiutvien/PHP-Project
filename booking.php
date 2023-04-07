@@ -1,6 +1,6 @@
 <?php
 $id_tour=$_GET['id'];
-echo $id_tour;
+
 $link=new mysqli("localhost","root","","traveldana");
 $query="select * from activity";
 $result=mysqli_query($link,$query);
@@ -13,9 +13,7 @@ $name2=$row2['account_name'];
 if($name==$name2){
     $id=$row2['account_id'];
 }
-else{
-    $id=null;
-}
+
 }
 }
 if(!$id){
@@ -30,7 +28,7 @@ while($row3=mysqli_fetch_assoc($result3)){
     $price=$row3['price_offer'];
     $from_to=$row3['from_to_offer'];
    }
-   $query="insert into cart(image_tour,id_account,id_tour,name_tour,price_tour,from_to,status) value ('$image',$id,$id_tour,'$name',$price,'$from_to','checking in')";
+   $query="insert into cart(image_tour,id_account,id_tour,name_tour,price_tour,from_to,status) value ('$image',$id,$id_tour,'$name',$price,'$from_to')";
 $result=mysqli_query($link,$query);
 echo "<script>alert('ADD TO CART SUCCESSFULLY !!!')</script>";
 echo "<script>window.location.replace('index.php')</script>";
