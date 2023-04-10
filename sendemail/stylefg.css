@@ -1,0 +1,104 @@
+Register.css
+/* Strart Login */
+.check-box {
+    margin-left: 13px;
+}
+
+.text-title-7 {
+    margin-left: 210px;
+    color: gainsboro;
+}
+
+#text-title-6 {
+    position: relative;
+    font-size: 40px;
+    bottom: 370px;
+    text-align: center;
+}
+
+/* End Login */
+
+/* Start Register */
+.catalog-1 {
+    background-color: gray;
+    height: 600px;
+}
+
+.text-title-2 {
+    position: relative;
+    bottom: -115px;
+    color: aliceblue;
+}
+
+#text-title-3 {
+    position: relative;
+    bottom: -115px;
+    left: 15px;
+}
+
+.text-title-1,
+h6,
+h1 {
+    margin-left: 13px;
+
+}
+
+.btn-warning {
+    width: 520px;
+    margin-left: 10px;
+    color: aliceblue;
+}
+
+/* .btn-warning :after :hover{
+    background-color: black;
+} */
+
+.text-title-4 {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.text-title-4 a {
+    color:#2F98B9 ;
+}
+
+.first-photo {
+    margin-top: -100px;
+    width: 1534px;
+    height: 300px;
+    margin-left: -220px;
+}
+
+.row,
+.col-sm-6 {
+    bottom: -100px;
+}
+
+.form-group,
+.form-contro {
+    padding: 10px;
+}
+
+.second-photo {
+    height: 600px;
+    width: 600px;
+    margin-left: -30px;
+}
+#text-title-5 {
+    position: relative;
+    font-size: 50px;
+    bottom: 370px;
+    text-align: center;
+}
+
+/* End Register */
+h1{
+    color:black;
+}
+.firt-photo{
+    width: 30px;
+}
+.xanh{
+    background-color: #2F98B9;
+}
