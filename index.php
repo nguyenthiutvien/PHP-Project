@@ -130,7 +130,7 @@
                 <div class="header-search hidden-lg">
                     <a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a>
                 </div>
-                <a href="index.php" class="navbar-brand"><span><img style = "width=30px; height: 40px"src="./images/logo1.png" alt=""></span> <span style="color:#DD761E"> TRAVEL</span><span style="color:#2F98B9">DANA</a>
+                <a href="index.php" class="navbar-brand"><span><img style = "width:30px; height: 40px"src="./images/logo1.png" alt=""></span> <span style="color:#DD761E"> TRAVEL</span><span style="color:#2F98B9">DANA</a>
             </div>
             <!-- end navbar-header -->
 
@@ -183,7 +183,7 @@
 
     <div class="sidenav-content">
         <div style= "background-color:black;" id="mySidenav" class="sidenav">
-            <h2 id="web-name" style= "background-color:black;"><span><img style = "width=30px; height: 40px"src="./images/logo1.png" alt=""></span> <span style="color:#DD761E"> TRAVEL</span><span style="color:#2F98B9">DANA</h2>
+            <h2 id="web-name" style= "background-color:black;"><span><img style = "width:30px; height: 40px"src="./images/logo1.png" alt=""></span> <span style="color:#DD761E"> TRAVEL</span><span style="color:#2F98B9">DANA</h2>
 
             <div id="main-menu">
                 <div class="closebtn">
