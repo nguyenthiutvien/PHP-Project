@@ -9,7 +9,10 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
  
 // Include config file
-require_once "database/connect.php";
+
+$conn=mysqli_connect("localhost","root","","traveldana")
+
+
  
 // Define variables and initialize with empty values
 $username = $password = "";

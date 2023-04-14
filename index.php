@@ -167,7 +167,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="login.php">Login Homepage</a></li>
                             <li><a href="registration.php">Registration Homepage</a></li>
-                            <li><a href="forgot-password.php">Forgot Password Homepage</a></li>
+                            <li><a href="./sendemail/vendor/forgot password.php">Forgot Password Homepage</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a></li>
@@ -328,7 +328,6 @@
                                                     </div>
                                                 </div>
                                                 <!-- end columns -->
-
                                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                                     <div class="form-group left-icon">
                                                         <input type="text" class="form-control dpd2" placeholder="Check Out">

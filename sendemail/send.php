@@ -40,7 +40,7 @@ if(isset($_POST["btn"])){
         if (isset($_POST['btn'])) {
             if($_POST['email'] != null){
                 $email = ($_POST["email"]);
-                $dt = "SELECT * FROM  user where email='$email' ";
+                $dt = "SELECT * FROM  account where account_email='$email' ";
                 $ms=mysqli_query($conn,$dt);
                 $dem =mysqli_num_rows($ms);
                 if($dem>0){
