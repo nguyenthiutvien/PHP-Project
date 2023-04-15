@@ -43,7 +43,7 @@
                         </div>
                     </form>
                     <h6 class="text-title-4">Already Have an Account ? <a href="Login Here">Log in here</a></h6>
-                    <h6 class="text-title-4">New here ? <a href="Login Here">Join Us</a> </h6>  
+                    <h6 class="text-title-4">New here ?<a href="Login Here">Join Us</a> </h6>  
                 </div>
             </div>
             <div class="col-sm-6">
