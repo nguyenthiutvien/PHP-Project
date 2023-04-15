@@ -1,4 +1,50 @@
 <?php
+
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'travelDana');
+ 
+/* Attempt to connect to MySQL database */
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+ 
+// Check connection
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+?>
+<?php
+
+$link="CREATE TABLE users (
+     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+)";
+?>
+
+<?php
+$mysqli = mysqli_connect("localhost","root","","travelDana");
+
+if ($mysqli == false){
+   die("ERROR: Could not connect.".mysqli_connect_error());
+}
+
+
+if ($mysqli->query($link)==true){
+
+}
+else{
+   echo"ERROR: Could not able to execute $link.". $mysqli->error;
+}
+
+$mysqli->close();
+?>
+
+<?php
 // Initialize the session
 session_start();
  
@@ -10,10 +56,9 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
  
 // Include config file
 
-$conn=mysqli_connect("localhost","root","","traveldana")
+$conn=mysqli_connect("localhost","root","","traveldana");
 
 
- 
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -101,6 +146,88 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="https://kit.fontawesome.com/11a9c95312.js" crossorigin="anonymous"></script>
     <style>
         body{ font: 14px sans-serif; }
+        #frm{  
+    border: solid #efefef 1px;  
+    width:530px;  
+    border-radius: 2px;  
+    margin: 120px auto;  
+    background: white;  
+    padding: 50px; 
+    margin-left: 200px; 
+    background-color: #efefef;
+}  
+.text-title-2{
+    position: relative;
+    bottom: -95px;
+    color: aliceblue;
+    left: 200px;
+    
+}
+#text-title-3{
+    position: relative;
+    bottom: -95px;
+    left: 200px;
+    font-size: 18px;
+}
+.first-photo{
+    margin-top: -100px;
+    width: 1600px;
+    height: 300px;
+    margin-left: -220px;
+ }
+
+.wrapper{ 
+    width: 470px; 
+    padding: 20px; 
+}
+.btn-primary{
+    background-color: #2F98B9;
+    width: 430px; 
+    border: none;
+    
+}
+
+.text-title4 {
+    text-align: center;
+    
+}
+.text-title-7{
+    left: 150px;
+    position: relative;
+}
+
+.second-photo{
+    height: 446px;
+    width: 530px;
+    margin-left: 750px;
+    margin-top: -746px;
+}
+
+.third-photo{
+    position: relative;
+    height: 517px;
+    width: 550px;
+    margin-left: 750px;
+    margin-top: -818px;
+}
+#text-title-6{
+    position: relative;
+    margin-left: 920px;
+    margin-top: -400px;
+    font-size: 30px;
+   
+   
+}
+
+.first-photo-register{
+    margin-top: -100px;
+    width: 1715px;
+    height: 300px;
+    margin-left: -220px;
+}
+.here, a{
+    color: #2F98B9;
+}
         
     </style>
 </head>
