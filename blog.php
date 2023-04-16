@@ -115,27 +115,27 @@
                 <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span><i class="fa fa-angle-down"></i></span></a>
                     <ul class="dropdown-menu">
                         <li class="active"><a href="index.php">Main Homepage</a></li>
-                        <li><a href="cruise-homepage.php">Tour Homepage</a></li>
-                        <li><a href="cruise-homepage.php">Sports Tour Homepage</a></li>
+                        <li><a href="allTour.php">Tour Homepage</a></li>
+                        <li><a href="allTour.php">Sports Tour Homepage</a></li>
                         
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tours<span><i class="fa fa-angle-down"></i></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="cruise-homepage.php">Tour Homepage</a></li>
+                        <li><a href="allTour.php">Tour Homepage</a></li>
                         <li><a href="before-you-fly.php">Before You Fly</a></li>
                         <li><a href="travel-insurance.php">Travel insurance</a></li>
                         
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs</a>
+                <li class="dropdown"><a href="blog.php" class="dropdown-toggle" data-toggle="dropdown">Blogs</a>
                    
                 </li>
               
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US</a>
+                <li class="dropdown"><a href="aboutus.php" class="dropdown-toggle" data-toggle="dropdown">ABOUT US</a>
                     
                 </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTACT</a>
+                <li class="dropdown"><a href="contact.php" class="dropdown-toggle" data-toggle="dropdown">CONTACT</a>
                    
                 </li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<span><i class="fa fa-angle-down"></i></span></a>
@@ -170,14 +170,14 @@
             <a href="#flight-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span><i class="fa fa-chevron-down arrow"></i></span></a>
                 <div class="collapse sub-menu" id="home-links">
                     <a href="index.php" class="list-group-item active">Main Homepage</a>
-                    <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
-                    <a href="cruise-homepage.php" class="list-group-item">Sports Tour Homepage</a>
+                    <a href="allTour.php" class="list-group-item">Tour Homepage</a>
+                    <a href="allTour.php" class="list-group-item">Sports Tour Homepage</a>
                  
                 </div>
                 
                 <a href="#cruise-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Tours<span><i class="fa fa-chevron-down arrow"></i></span></a>
                 <div class="collapse sub-menu" id="cruise-links">
-                    <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
+                    <a href="allTour.php" class="list-group-item">Tour Homepage</a>
                     <a href="before-you-fly.php" class="list-group-item">Before You Fly</a>
                     <a href="travel-insurance.php" class="list-group-item">Travel insurance</a>
                     
@@ -589,37 +589,27 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 footer-widget ftr-contact">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-contact">
                         <h3 class="footer-heading">CONTACT US</h3>
                         <ul class="list-unstyled">
-                            <li><span><i class="fa fa-map-marker"></i></span>Passerellesnumériques Viet Nam</li>
+                            <li><span><i class="fa fa-map-marker"></i></span>101b Le Huu Trac, Son Tra</li>
                             <li><span><i class="fa fa-phone"></i></span>+00 964 988 91</li>
-                            <li><span><i class="fa fa-envelope"></i></span>hamongkhang@gmail.com</li>
+                            <li><span><i class="fa fa-envelope"></i></span>kltbvcontact@gmail.com</li>
                         </ul>
                     </div>
                     <!-- end columns -->
 
-                    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 footer-widget ftr-links">
-                        <h3 class="footer-heading">COMPANY</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="cruise-homepage.php">Flight</a></li>
-                            <li><a href="cruise-homepage.php">Hotel</a></li>
-                            <li><a href="cruise-homepage.php">Tours</a></li>
-                            <li><a href="cruise-homepage.php">Cruise</a></li>
-                            <li><a href="cruise-homepage.php">Cars</a></li>
-                        </ul>
-                    </div>
                     <!-- end columns -->
 
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 footer-widget ftr-links ftr-pad-left">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-links ftr-pad-left">
                         <h3 class="footer-heading">RESOURCES</h3>
                         <ul class="list-unstyled">
-                            <li><a href="blog-listing-right-sidebar.php">Blogs</a></li>
-                            <li><a href="contact-us.php">Contact Us</a></li>
-                            <li><a href="logout.php">Login</a></li>
-                            <li><a href="registration.php">Register</a></li>
-                            <li><a href="index.php">Site Map</a></li>
+                        <li><a href="blog-listing-right-sidebar.php">Home</a></li>
+                            <li><a href="blog-listing-right-sidebar.php">Tours</a></li>
+                            <li><a href="blog.php">Blogs</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                            <li><a href="index.php">Account</a></li>
                         </ul>
                     </div>
                     <!-- end columns -->
@@ -652,7 +642,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="copyright">
-                        <p>© 2021 <a href="index.php">StartTravel</a>. All rights reserved.</p>
+                        <p>© 2023 <a href="index.php">Traveldana</a>. All rights reserved.</p>
                     </div>
                     <!-- end columns -->
 

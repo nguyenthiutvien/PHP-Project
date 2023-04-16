@@ -167,14 +167,14 @@
                     <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
                             <li class="active"><a href="index.php">Main Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Sports Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Sports Tour Homepage</a></li>
                             
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tours<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
                             <li><a href="before-you-fly.php">Before You Fly</a></li>
                             <li><a href="travel-insurance.php">Travel insurance</a></li>
                             
@@ -187,7 +187,7 @@
                     <li class="dropdown"><a href="#" >ABOUT US</a>
                         
                     </li>
-                    <li class="dropdown"><a href="#">CONTACT</a>
+                    <li class="dropdown"><a href="contact.php">CONTACT</a>
                        
                     </li>
                     <li class="dropdown"><a href="#" >Account<span><i class="fa fa-angle-down"></i></span></a>
@@ -222,14 +222,14 @@
                 <a href="#flight-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="home-links">
                         <a href="index.php" class="list-group-item active">Main Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Sports Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Sports Tour Homepage</a>
                      
                     </div>
                     
                     <a href="#cruise-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Tours<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="cruise-links">
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
                         <a href="before-you-fly.php" class="list-group-item">Before You Fly</a>
                         <a href="travel-insurance.php" class="list-group-item">Travel insurance</a>
                         
@@ -238,9 +238,9 @@
                   
                     <!-- end sub-menu -->
 
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
+                    <a href="blog.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
                     <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>About us</a>
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
+                    <a href="contact.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
                   
                  
                     <!-- end sub-menu -->
@@ -748,7 +748,7 @@
              
 
                     <div class="view-all text-center">
-                        <a href="cruise-homepage.php" class="btn btn-orange">View All</a>
+                        <a href="allTour.php" class="btn btn-orange">View All</a>
                     </div>
                    
                 </div>
@@ -879,7 +879,7 @@
                     <!-- end owl-hotel-offers -->
 
                     <div class="view-all text-center">
-                        <a href="cruise-homepage.php" class="btn btn-orange">View All</a>
+                        <a href="allTour.php" class="btn btn-orange">View All</a>
                     </div>
                     <!-- end view-all -->
                 </div>
@@ -1065,7 +1065,7 @@
 
 
                     <div class="view-all text-center">
-                        <a href="cruise-homepage.php" class="btn btn-orange">View All</a>
+                        <a href="allTour.php" class="btn btn-orange">View All</a>
                     </div>
                     <!-- end view-all -->
                 </div>
@@ -1275,9 +1275,9 @@
                         <ul class="list-unstyled">
                         <li><a href="blog-listing-right-sidebar.php">Home</a></li>
                             <li><a href="blog-listing-right-sidebar.php">Tours</a></li>
-                            <li><a href="contact-us.php">Blogs</a></li>
-                            <li><a href="logout.php">About us</a></li>
-                            <li><a href="registration.php">Contact</a></li>
+                            <li><a href="blog.php">Blogs</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                             <li><a href="index.php">Account</a></li>
                         </ul>
                     </div>
