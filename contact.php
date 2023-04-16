@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>TRAVEL DANA</title>
+<title>TRAVEL DANA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -34,18 +34,21 @@
     <!-- Magnific Gallery -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- <script src="js/index.js"></script> -->
- 
+    <style>
+        .add {
+            display: flex;
+        }
+
+        #home-links {
+            margin: 0 0 0 300px;
+            position: absolute;
+            background-color: black;
+        }
+    </style>
 </head>
-
-
 <body id="main-homepage">
 
-    <!--====== LOADER =====-->
-    <!-- <div class="loader"></div> -->
-
-
-    <!--======== SEARCH-OVERLAY =========-->
-    <div class="overlay">
+<div class="overlay">
         <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
         <div class="overlay-content">
             <div class="form-center">
@@ -167,14 +170,14 @@
                     <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
                             <li class="active"><a href="index.php">Main Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Sports Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Sports Tour Homepage</a></li>
                             
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tours<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
                             <li><a href="before-you-fly.php">Before You Fly</a></li>
                             <li><a href="travel-insurance.php">Travel insurance</a></li>
                             
@@ -187,7 +190,7 @@
                     <li class="dropdown"><a href="#" >ABOUT US</a>
                         
                     </li>
-                    <li class="dropdown"><a href="#">CONTACT</a>
+                    <li class="dropdown"><a href="contact.php">CONTACT</a>
                        
                     </li>
                     <li class="dropdown"><a href="#" >Account<span><i class="fa fa-angle-down"></i></span></a>
@@ -222,14 +225,14 @@
                 <a href="#flight-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="home-links">
                         <a href="index.php" class="list-group-item active">Main Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Sports Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Sports Tour Homepage</a>
                      
                     </div>
                     
                     <a href="#cruise-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Tours<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="cruise-links">
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
                         <a href="before-you-fly.php" class="list-group-item">Before You Fly</a>
                         <a href="travel-insurance.php" class="list-group-item">Travel insurance</a>
                         
@@ -238,9 +241,9 @@
                   
                     <!-- end sub-menu -->
 
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
+                    <a href="blog.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
                     <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>About us</a>
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
+                    <a href="contact.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
                   
                  
                     <!-- end sub-menu -->
@@ -259,119 +262,168 @@
         <!-- end mySidenav -->
     </div>
     <!-- end sidenav-content -->
-    <!--================= PAGE-COVER ================-->
-    <section class="page-cover" id="cover-byf-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="page-title">Cart</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li class="active">My Cart</li>
-                    </ul>
-                </div>
-                <!-- end columns -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
 
-    <!-- end page-cover -->
-    <h1 class="text-center"><b>MY CART</b></h1>
+  <!--===== INNERPAGE-WRAPPER ====-->
+  <section class="page-cover" id="cover-contact-us">
     <div class="container">
-        <div class="container">
-            <table id="cart" class="table table-hover table-condensed">
-                <thead>
-
-                    <tr>
-                        <td><a href="index.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> CONTINUE BUYING</a>
-                        </td>
-                        <th style="width:15%"><b></b></th>
-                        <th style="width:15%"><b></b></th>
-                        <th style="width:15%"><b></b></th>
-                        <th style="width:200%"><b></b></th>
-                        <td class="hidden-xs text-center"></strong>
-                        </td>
-                        <td><a href="#" class="btn btn-success btn-block">HISTORY <i class="fa fa-angle-right"></i></a>
-                        </td>
-                    </tr>
-                </thead>
-            </table>
-
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="page-title">Contact Us</h1>
+          <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Contact Us Page</li>
+          </ul>
         </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>IMAGE</th>
-                            <th>NAME</th>
-                            <th>FROM_TO</th>
-                            <th>PRICE</th>
-                            <th>PAY</th>
-                            <th>TOOL</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <?php
-                        $link = new mysqli("localhost", "root", "", "traveldana");
-                        $query = "select * from activity";
-                        $result = mysqli_query($link, $query);
-                        $query2 = "select * from account";
-                        $result2 = mysqli_query($link, $query2);
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $name = $row['activity_name'];
-                            while ($row2 = mysqli_fetch_assoc($result2)) {
-                                $name2 = $row2['account_name'];
-                                if ($name == $name2) {
-                                    $id = $row2['account_id'];
-                                }
-                            }
-                        }
-                        $total = 0;
-                        $queryquery = "select * from cart where id_account='$id'";
-                        $resultresult = mysqli_query($link, $queryquery);
-                        while ($rowrow = mysqli_fetch_assoc($resultresult)) {
-                            $idd = $rowrow['id_cart'];
-                            $image = $rowrow['image_tour'];
-                            $name = $rowrow['name_tour'];
-                            $price = $rowrow['price_tour'];
-                            $from_to = $rowrow['from_to'];
-                            $total = $total + $price;
-                            echo $table = "
-                                        <tr>
-                                            <td><img src='images/$image' height='100' width='150'></td>
-                                            <td>$name</td>
-                                            <td>$from_to</td>
-                                            <td>$price $</td>  
-                                            <td><a href='#'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
-                                            <td><a href='delete_cart.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
-                                        </tr>
-                                        ";
-                        }
-                        echo $table2 = "
-                                    <tr>
-                                            <td>TOTAL</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>             
-                                            <td>$total $</td>
-                                        </tr>
-                                    ";
-                        ?>
-                        <tr>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+      </div>
     </div>
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-    <!--======================= FOOTER =======================-->
-    <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
+  </section>
+  <!--===== INNERPAGE-WRAPPER ====-->
+  <section class="innerpage-wrapper">
+    <div id="contact-us" class="innerpage-section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-5 no-pd-r">
+            <div class="custom-form contact-form">
+              <h3>Contact Us</h3>
+              <p>Welcome to Starttravel. Your informations will be secured carefully. Please fill informations fully. Contact us if you get any problems.</p>
+              <form method="POST" action="">
+                <div class="form-group">
+<input type="text" class="form-control" placeholder="Name" required name="user"/>
+                  <span><i class="fa fa-user"></i></span>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email" required  name="email"/>
+                  <span><i class="fa fa-envelope"></i></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject" required name="subject"/>
+                    <span><i class="fa fa-info-circle"></i></span>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" rows="4" placeholder="Your Message" name="message"></textarea>
+                  <span><i class="fa fa-pencil"></i></span>
+                </div>
+                <button type="send" class="btn btn-orange btn-block" name="send">Send</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-7 no-pd-l">
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5422.217680878009!2d108.24220260953769!3d16.06098018315957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142177f2ced6d8b%3A0xe282c779264f7088!2zVHLGsOG7nW5nIENhbyDEkOG6s25nIE5naOG7gSDEkMOgIE7hurVuZw!5e0!3m2!1svi!2skr!4v1611308637342!5m2!1svi!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <?php
+      use PHPMailer\PHPMailer\PHPMailer;
+      use PHPMailer\PHPMailer\SMTP;
+      use PHPMailer\PHPMailer\Exception;
+
+      include './phpmailer/src/Exception.php';
+      include './phpmailer/src/PHPMailer.php';
+      include './phpmailer/src/SMTP.php';
+
+      require './vendor/autoload.php';
+
+      if(isset($_POST['send'])){
+
+
+        $email = $_POST['email'];
+
+        try {
+            $mail = new PHPMailer(true);
+            //Server settings
+
+            $mail->isSMTP();                         
+            $mail->Host       = 'smtp.gmail.com';  
+            $mail->SMTPDebug = 0;                
+            $mail->SMTPAuth   = true;                           
+            $mail->Username   = 'loanthi3703@gmail.com';
+            $mail->Password   = 'rfxzjftlrpsntizv';          
+            $mail->SMTPSecure = 'ssl';    
+            $mail->Port       = 465;                                
+            $mail->setFrom('loanthi3703@gmail.com');
+            $mail->addAddress($email);   
+
+            //Content
+            $mail->isHTML(true);                                
+            $mail->Subject = 'Here is the subject';
+            $mail->Body    = 'thank you for comment ';
+            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+            $mail->send();
+echo "<script>alert('Message has been sent')</script>";
+            } catch (Exception $e) {
+              echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}')</script>";
+            }
+            }
+  ?>
+
+<?php
+
+  if (isset($_POST["send"])) {
+    $ketnoi = mysqli_connect("localhost", "root", "", "tour");
+    $name = $_POST["user"];
+    $email = $_POST["email"];
+    $sbj = $_POST["subject"];
+    $mess = $_POST["message"];
+
+    // Kiểm tra xem email đã tồn tại trong bảng chưa
+    $check_email_query = "SELECT * FROM contact WHERE email='$email'";
+    $result = mysqli_query($ketnoi, $check_email_query);
+    $num_rows = mysqli_num_rows($result);
+    if ($num_rows > 0) {
+        //Email đã tồn tại, xử lý lỗi hoặc hiển thị thông báo cho người dùng
+        echo "<script>alert('This email already exists in our database. Please enter another email.')</script>";
+    } else {
+        // Email không tồn tại, hãy chèn dữ liệu mới vào bảng
+        $insert_query = "INSERT INTO contact (name, email, subject, feedback) VALUES ('$name', '$email', '$sbj', '$mess')";
+        $result = mysqli_query($ketnoi, $insert_query);
+        echo "<script>alert('Your data has been sent successfully.')</script>";
+    }
+    mysqli_close($ketnoi);
+}
+?>
+
+ -->
+
+  <!--======================= BEST FEATURES =====================-->
+  <section id="best-features" class="banner-padding black-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="b-feature-block">
+            <span><i class="fa fa-dollar"></i></span>
+            <h3>Best Price Guarantee</h3>
+            <p>Our website brings you the best experiences and services with the most standard price. Our services are approved a resolution by Vietnam Travel Branch.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-feature-block">
+            <span><i class="fa fa-lock"></i></span>
+            <h3>Safe and Secure</h3>
+            <p>All your personal informations, supported informations will be kept and secured in the best way. Only you and administrators can know. Your informations never have leaked out and lost.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-feature-block">
+            <span><i class="fa fa-thumbs-up"></i></span>
+            <h3>Best Travel Agents</h3>
+            <p>We have related to the best Travel agency in Vietnam. Supported and admitted by many branches, we have been improving and broading our activities.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="b-feature-block">
+            <span><i class="fa fa-bars"></i></span>
+            <h3>Travel Guidelines</h3>
+            <p>All your questions will be replied by administrators and they will help you. We're always side by side and help you about any problems.</p>
+          </div>
+        </div>
+
+        <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
 
 <div id="footer-top" class="banner-padding ftr-top-grey ftr-text-white">
     <div class="container">
@@ -394,9 +446,9 @@
                 <ul class="list-unstyled">
                 <li><a href="blog-listing-right-sidebar.php">Home</a></li>
                     <li><a href="blog-listing-right-sidebar.php">Tours</a></li>
-                    <li><a href="contact-us.php">Blogs</a></li>
-                    <li><a href="logout.php">About us</a></li>
-                    <li><a href="registration.php">Contact</a></li>
+                    <li><a href="blog.php">Blogs</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="index.php">Account</a></li>
                 </ul>
             </div>
@@ -449,24 +501,5 @@
 <!-- end footer-bottom -->
 
 </section>
-<!-- end footer -->
-
-
-<!-- Page Scripts Starts -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/custom-navigation.js"></script>
-<script src="js/custom-flex.js"></script>
-<script src="js/custom-owl.js"></script>
-<script src="js/custom-date-picker.js"></script>
-<script src="js/custom-video.js"></script>
-<script src="js/login.js"></script>
-<!-- Page Scripts Ends -->
-
 </body>
-
-</html>
+</html

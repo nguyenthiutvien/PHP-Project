@@ -34,17 +34,7 @@
     <!-- Magnific Gallery -->
     <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- <script src="js/index.js"></script> -->
-    <style>
-        .add {
-            display: flex;
-        }
-
-        #home-links {
-            margin: 0 0 0 300px;
-            position: absolute;
-            background-color: black;
-        }
-    </style>
+ 
 </head>
 
 
@@ -100,7 +90,27 @@
                             <li><a href="cart.php" id="thanh4"><span><i class="fa fa-shopping-cart"></i></span>Cart</a>
                             </li>
                             <li>
-                                
+                            <form>
+                                    <ul class="list-inline">
+                                        
+                                        
+                                        <li>
+                                            <a id="ten"><span><i class="fa fa-circle blackiconcolor"></i></span>
+                                                <?php
+                                                include('login_set.php');
+                                                $ten = new user();
+                                                $rows = $ten->fetch();
+                                                if (!empty($rows)) {
+                                                    foreach ($rows as $row) {
+                                                        $name = $row['activity_name'];
+                                                    }
+                                                    echo $name;
+                                                }
+                                                ?></a>
+                                        </li>
+                                    </ul>
+
+                                </form>   
                             </li>
 
                         </ul>
@@ -116,7 +126,24 @@
     <!-- end container -->
 
     <!-- end top-bar -->
-   
+    <script type="text/javascript">
+        function inten() {
+            document.getElementById("ten").style.display = "block";
+            document.getElementById("thanh3").style.display = "block";
+            document.getElementById("thanh4").style.display = "block";
+            document.getElementById("thanh1").style.display = "none";
+            document.getElementById("thanh2").style.display = "none";
+        }
+        <?php
+        $rows = $ten->fetch();
+        if (!empty($rows)) {
+            foreach ($rows as $row) {
+                $name = $row['activity_name'];
+            }
+            echo "inten();";
+        }
+        ?>
+    </script>
        
     </script>
     <nav class="navbar navbar-default main-navbar navbar-custom navbar-black" id="mynavbar-1">
@@ -140,30 +167,30 @@
                     <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
                             <li class="active"><a href="index.php">Main Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Sports Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Sports Tour Homepage</a></li>
                             
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tours<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
                             <li><a href="before-you-fly.php">Before You Fly</a></li>
                             <li><a href="travel-insurance.php">Travel insurance</a></li>
                             
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs</a>
+                    <li class="dropdown"><a href="blog.php" >Blogs</a>
                        
                     </li>
                   
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">ABOUT US</a>
+                    <li class="dropdown"><a href="#" >ABOUT US</a>
                         
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTACT</a>
+                    <li class="dropdown"><a href="contact.php">CONTACT</a>
                        
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<span><i class="fa fa-angle-down"></i></span></a>
+                    <li class="dropdown"><a href="#" >Account<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="login.php">Login Homepage</a></li>
                             <li><a href="registration.php">Registration Homepage</a></li>
@@ -195,14 +222,14 @@
                 <a href="#flight-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="home-links">
                         <a href="index.php" class="list-group-item active">Main Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Sports Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Sports Tour Homepage</a>
                      
                     </div>
                     
                     <a href="#cruise-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Tours<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="cruise-links">
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
                         <a href="before-you-fly.php" class="list-group-item">Before You Fly</a>
                         <a href="travel-insurance.php" class="list-group-item">Travel insurance</a>
                         
@@ -211,9 +238,9 @@
                   
                     <!-- end sub-menu -->
 
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
+                    <a href="blog.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
                     <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>About us</a>
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
+                    <a href="contact.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
                   
                  
                     <!-- end sub-menu -->
@@ -616,6 +643,8 @@
     </section>
     <!-- end flexslider-container -->
 
+
+
    <!--=============== TOUR OFFERS ===============-->
    <section id="tour-offers" class="section-padding">
         <div class="container">
@@ -655,7 +684,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="booking_offer.php?id=' . $id_offer . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                    <a href="booking.php?id=' . $id_offer . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                 </div>
                             </div>
                         </div>
@@ -718,7 +747,7 @@
              
 
                     <div class="view-all text-center">
-                        <a href="cruise-homepage.php" class="btn btn-orange">View All</a>
+                        <a href="allTour.php" class="btn btn-orange">View All</a>
                     </div>
                    
                 </div>
@@ -849,7 +878,7 @@
                     <!-- end owl-hotel-offers -->
 
                     <div class="view-all text-center">
-                        <a href="cruise-homepage.php" class="btn btn-orange">View All</a>
+                        <a href="allTour.php" class="btn btn-orange">View All</a>
                     </div>
                     <!-- end view-all -->
                 </div>
@@ -1035,7 +1064,7 @@
 
 
                     <div class="view-all text-center">
-                        <a href="cruise-homepage.php" class="btn btn-orange">View All</a>
+                        <a href="allTour.php" class="btn btn-orange">View All</a>
                     </div>
                     <!-- end view-all -->
                 </div>
@@ -1245,9 +1274,9 @@
                         <ul class="list-unstyled">
                         <li><a href="blog-listing-right-sidebar.php">Home</a></li>
                             <li><a href="blog-listing-right-sidebar.php">Tours</a></li>
-                            <li><a href="contact-us.php">Blogs</a></li>
-                            <li><a href="logout.php">About us</a></li>
-                            <li><a href="registration.php">Contact</a></li>
+                            <li><a href="blog.php">Blogs</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="contact.php">Contact</a></li>
                             <li><a href="index.php">Account</a></li>
                         </ul>
                     </div>

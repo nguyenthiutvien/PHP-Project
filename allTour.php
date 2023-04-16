@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>TRAVEL DANA</title>
+    <title>All Tour Homepage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Font Awesome Stylesheet -->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" id="cpswitch" href="css/orange.css">
@@ -30,22 +30,34 @@
 
     <!--Date-Picker Stylesheet-->
     <link rel="stylesheet" href="css/datepicker.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+            // Send Search Text to the server
+            $("#search").keyup(function() {
+                let searchText = $(this).val();
+                if (searchText != "") {
+                    $.ajax({
+                        url: "search_all.php",
+                        method: "post",
+                        data: {
+                            query: searchText,
+                        },
+                        success: function(response) {
+                            $("#show-list").html(response);
+                        },
+                    });
+                }
 
-    <!-- Magnific Gallery -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- <script src="js/index.js"></script> -->
- 
+            });
+        });
+    </script>
 </head>
 
 
-<body id="main-homepage">
+<body id="cruise-homepage">
 
-    <!--====== LOADER =====-->
-    <!-- <div class="loader"></div> -->
-
-
-    <!--======== SEARCH-OVERLAY =========-->
-    <div class="overlay">
+<div class="overlay">
         <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
         <div class="overlay-content">
             <div class="form-center">
@@ -167,14 +179,14 @@
                     <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
                             <li class="active"><a href="index.php">Main Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Sports Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Sports Tour Homepage</a></li>
                             
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tours<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
+                            <li><a href="allTour.php">Tour Homepage</a></li>
                             <li><a href="before-you-fly.php">Before You Fly</a></li>
                             <li><a href="travel-insurance.php">Travel insurance</a></li>
                             
@@ -187,7 +199,7 @@
                     <li class="dropdown"><a href="#" >ABOUT US</a>
                         
                     </li>
-                    <li class="dropdown"><a href="#">CONTACT</a>
+                    <li class="dropdown"><a href="contact.php">CONTACT</a>
                        
                     </li>
                     <li class="dropdown"><a href="#" >Account<span><i class="fa fa-angle-down"></i></span></a>
@@ -222,14 +234,14 @@
                 <a href="#flight-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="home-links">
                         <a href="index.php" class="list-group-item active">Main Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
-                        <a href="cruise-homepage.php" class="list-group-item">Sports Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Sports Tour Homepage</a>
                      
                     </div>
                     
                     <a href="#cruise-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Tours<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="cruise-links">
-                        <a href="cruise-homepage.php" class="list-group-item">Tour Homepage</a>
+                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
                         <a href="before-you-fly.php" class="list-group-item">Before You Fly</a>
                         <a href="travel-insurance.php" class="list-group-item">Travel insurance</a>
                         
@@ -238,9 +250,9 @@
                   
                     <!-- end sub-menu -->
 
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
+                    <a href="blog.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Blogs</a>
                     <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>About us</a>
-                    <a href="#tours-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
+                    <a href="contact.php" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-globe link-icon"></i></span>Contact</a>
                   
                  
                     <!-- end sub-menu -->
@@ -259,16 +271,81 @@
         <!-- end mySidenav -->
     </div>
     <!-- end sidenav-content -->
-    <!--================= PAGE-COVER ================-->
-    <section class="page-cover" id="cover-byf-info">
+
+
+    <!--=============== CRUISE capitalS ===============-->
+    <section id="cruise-capitals" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="page-title">Cart</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li class="active">My Cart</li>
-                    </ul>
+                    <div class="page-heading">
+                        <h2>ALL TOURS</h2>
+                        <hr class="heading-line" />
+                    </div>
+                    <!-- end page-heading -->
+
+                    <div class="row" id="show-list">
+                    <!-- Cruise -->
+                        <?php
+                         include ("admin_set.php");
+                        $tourCruise = new tourCruise();
+                        $sql = "select * from tour_offer";
+                        $rows = $tourCruise->fetch($sql);
+                        if (!empty($rows)) {
+                            foreach ($rows as $row) {
+                                $id_offer = $row['id_offer'];
+                                $name_offer = $row['name_offer'];
+                                $img_offer = $row['img_offer'];
+                                $price_offer = $row['price_offer'];
+                                $detail_offer = $row['detail_offer'];
+                                $from_to_offer = $row['from_to_offer'];
+                                echo "<div class='col-sm-6 col-md-6'>
+                                    <div class='main-block cruise-block'>
+                                        <div class='row'>
+                                            <div class='col-sm-12 col-md-6 col-md-push-6 no-pd-l'>
+                                                <div class='main-img cruise-img'>
+                                                    <a>
+                                                    <div data-toggle='modal' data-target='#myModalCruise$id_offer'><img src='images/$img_offer'class='img-responsive' alt='cruise-img'/></div>
+                                                        <div class='cruise-mask'>
+                                                            <p>7 Nights, 6 Days</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+    
+                                            <div class='col-sm-12 col-md-6 col-md-pull-6 no-pd-r'>
+                                                <div class='main-info cruise-info'>
+                                                    <div class='main-title cruise-title'>
+                                                        <a href='#'> $name_offer</a>
+                                                        <p>From: $from_to_offer</p>
+                                                        <div class='rating'>
+                                                            <span><i class='fa fa-star orange'></i></span>
+                                                            <span><i class='fa fa-star orange'></i></span>
+                                                            <span><i class='fa fa-star orange'></i></span>
+                                                            <span><i class='fa fa-star orange'></i></span>
+                                                            <span><i class='fa fa-star lightgrey'></i></span>
+                                                        </div>
+                                                        <span class='cruise-price'>$price_offer</span>
+                                                    </div>
+                                                    
+                                                </div>
+                                               
+                                            </div>
+        
+                                        </div>
+                                       
+                                    </div>
+                                    
+                                </div>
+                                
+                                        ";
+                            }
+                        }
+                        ?>
+                        <!-- Modal cruise-->
+                       
+                        
+                    <!-- end view-all -->
                 </div>
                 <!-- end columns -->
             </div>
@@ -276,100 +353,36 @@
         </div>
         <!-- end container -->
     </section>
+    <!-- end cruise-capitals -->
 
-    <!-- end page-cover -->
-    <h1 class="text-center"><b>MY CART</b></h1>
-    <div class="container">
+    <!--============== HIGHLIGHTS =============-->
+  
+
+    <!--========================= NEWSLETTER-1 ==========================-->
+    <section id="newsletter-1" class="section-padding back-size newsletter">
         <div class="container">
-            <table id="cart" class="table table-hover table-condensed">
-                <thead>
-
-                    <tr>
-                        <td><a href="index.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> CONTINUE BUYING</a>
-                        </td>
-                        <th style="width:15%"><b></b></th>
-                        <th style="width:15%"><b></b></th>
-                        <th style="width:15%"><b></b></th>
-                        <th style="width:200%"><b></b></th>
-                        <td class="hidden-xs text-center"></strong>
-                        </td>
-                        <td><a href="#" class="btn btn-success btn-block">HISTORY <i class="fa fa-angle-right"></i></a>
-                        </td>
-                    </tr>
-                </thead>
-            </table>
-
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>IMAGE</th>
-                            <th>NAME</th>
-                            <th>FROM_TO</th>
-                            <th>PRICE</th>
-                            <th>PAY</th>
-                            <th>TOOL</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <?php
-                        $link = new mysqli("localhost", "root", "", "traveldana");
-                        $query = "select * from activity";
-                        $result = mysqli_query($link, $query);
-                        $query2 = "select * from account";
-                        $result2 = mysqli_query($link, $query2);
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            $name = $row['activity_name'];
-                            while ($row2 = mysqli_fetch_assoc($result2)) {
-                                $name2 = $row2['account_name'];
-                                if ($name == $name2) {
-                                    $id = $row2['account_id'];
-                                }
-                            }
-                        }
-                        $total = 0;
-                        $queryquery = "select * from cart where id_account='$id'";
-                        $resultresult = mysqli_query($link, $queryquery);
-                        while ($rowrow = mysqli_fetch_assoc($resultresult)) {
-                            $idd = $rowrow['id_cart'];
-                            $image = $rowrow['image_tour'];
-                            $name = $rowrow['name_tour'];
-                            $price = $rowrow['price_tour'];
-                            $from_to = $rowrow['from_to'];
-                            $total = $total + $price;
-                            echo $table = "
-                                        <tr>
-                                            <td><img src='images/$image' height='100' width='150'></td>
-                                            <td>$name</td>
-                                            <td>$from_to</td>
-                                            <td>$price $</td>  
-                                            <td><a href='#'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
-                                            <td><a href='delete_cart.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
-                                        </tr>
-                                        ";
-                        }
-                        echo $table2 = "
-                                    <tr>
-                                            <td>TOTAL</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>             
-                                            <td>$total $</td>
-                                        </tr>
-                                    ";
-                        ?>
-                        <tr>
-
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    <h2>Subscribe Our Newsletter</h2>
+                    <p>Subscibe to receive our interesting updates</p>
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="email" class="form-control input-lg" placeholder="Enter your email address" required />
+                                <span class="input-group-btn"><button class="btn btn-lg"><i class="fa fa-envelope"></i></button></span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- end columns -->
             </div>
+            <!-- end row -->
         </div>
-    </div>
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+        <!-- end container -->
+    </section>
+    <!-- end newsletter-1 -->
+
+
     <!--======================= FOOTER =======================-->
     <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
 
@@ -394,9 +407,9 @@
                 <ul class="list-unstyled">
                 <li><a href="blog-listing-right-sidebar.php">Home</a></li>
                     <li><a href="blog-listing-right-sidebar.php">Tours</a></li>
-                    <li><a href="contact-us.php">Blogs</a></li>
-                    <li><a href="logout.php">About us</a></li>
-                    <li><a href="registration.php">Contact</a></li>
+                    <li><a href="blog.php">Blogs</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                     <li><a href="index.php">Account</a></li>
                 </ul>
             </div>
@@ -449,23 +462,24 @@
 <!-- end footer-bottom -->
 
 </section>
-<!-- end footer -->
+    <!-- end footer -->
 
 
-<!-- Page Scripts Starts -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/custom-navigation.js"></script>
-<script src="js/custom-flex.js"></script>
-<script src="js/custom-owl.js"></script>
-<script src="js/custom-date-picker.js"></script>
-<script src="js/custom-video.js"></script>
-<script src="js/login.js"></script>
-<!-- Page Scripts Ends -->
+    <!-- Page Scripts Starts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom-navigation.js"></script>
+    <script src="js/custom-flex.js"></script>
+    <script src="js/custom-owl.js"></script>
+    <script src="js/custom-date-picker.js"></script>
+    <script src="js/custom-video.js"></script>
+    <script src="js/login.js"></script>
+    <!-- Page Scripts Ends -->
+    <!-- Page Scripts Ends -->
 
 </body>
 

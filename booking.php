@@ -1,6 +1,6 @@
 <?php
+ini_set("display_errors",0);
 $id_tour=$_GET['id'];
-
 $link=new mysqli("localhost","root","","traveldana");
 $query="select * from activity";
 $result=mysqli_query($link,$query);
@@ -12,9 +12,6 @@ while($row2=mysqli_fetch_assoc($result2)){
 $name2=$row2['account_name'];
 if($name==$name2){
     $id=$row2['account_id'];
-}
-else{
-    $id=null;
 }
 }
 }
