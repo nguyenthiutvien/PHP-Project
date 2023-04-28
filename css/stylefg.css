@@ -99,6 +99,8 @@ h1{
 .firt-photo{
     width: 30px;
 }
-.xanh{
-    background-color: #2F98B9;
+
+ul li a {
+    list-style: none;
+    font-size: 100px;
 }
