@@ -17,9 +17,9 @@ public function login(){
     $user=$_POST['user'];
     $pass=$_POST['pass'];
     $kt=0;
-    if(($user=="admin")&&($pass=="vienvienvien")){
+    if(($user=="admin")&&($pass=="vienvien")){
         echo "<script>alert('WELLCOME TO ADMIN !!!')</script>";
-        
+        echo "<script>window.location.replace('admin.php')</script>";
     }
     else{
     $query1="select * from account";
@@ -31,7 +31,7 @@ public function login(){
           }
     }
      if($kt==1){
-     $query="insert into activity(activity_name,activity_password) values ('$user','$pass')";
+     $query="insert into activity(activity_name,activity_password) value ('$user','$pass')";
     if ($sql=$this->link->query($query)){
         echo "<script>alert('LOGGED IN SUCCESSFULLY')</script>";
         echo "<script>window.location.replace('index.php')</script>";

@@ -97,7 +97,7 @@ class tourOffer extends database
         $query = "insert into tour_offer(name_offer,img_offer,price_offer,detail_offer,from_to_offer) value ('$name','$anh',$price,'$detail','$fromto')";
         if ($sql = $this->link->query($query)) {
             echo "<script>alert('SUCCESS')</script>";
-            header("location: admin.php");
+            header("location: Admin/admin.php");
         }
     }
     public function edit($id)
@@ -157,7 +157,7 @@ class tourCruise extends database
         $query = "insert into tour_cruise(name_cruise,img_cruise,price_cruise,detail_cruise,from_to_cruise) value ('$name','$anh',$price,'$detail','$fromto')";
         if ($sql = $this->link->query($query)) {
             echo "<script>alert('SUCCESS')</script>";
-            header("location: admin.php");
+            header("location:Admin/admin.php");
         }
     }
     
@@ -210,7 +210,7 @@ class tourSport extends database
         $query = "insert into tour_sport(name_sport,img_sport,price_sport,detail_sport,from_to_sport) value ('$name','$anh',$price,'$detail','$fromto')";
         if ($sql = $this->link->query($query)) {
             echo "<script>alert('SUCCESS')</script>";
-            header("location: admin.php");
+            header("location:Admin/admin.php");
         }
     }
     public function edit($id)
@@ -261,7 +261,7 @@ class tourCapital extends database
         $query = "insert into tour_capital(name_capital,img_capital,price_capital,detail_capital,from_to_capital) value ('$name','$anh',$price,'$detail','$fromto')";
         if ($sql = $this->link->query($query)) {
             echo "<script>alert('SUCCESS')</script>";
-            header("location: admin.php");
+            header("location:Admin/admin.php");
         }
     }
     public function edit($id)
@@ -313,7 +313,7 @@ class blog extends database
         $query = "insert into blog(author_blog,img_blog,time_blog,title_blog,content_blog) value ('$author_blog','$anh','$time_blog','$title_blog','$content_blog')";
         if ($sql = $this->link->query($query)) {
             echo "<script>alert('SUCCESS')</script>";
-            header("location: admin.php");
+            header("location:Admin/admin.php");
         }
     }
     public function edit($id)

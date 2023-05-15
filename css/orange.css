@@ -2677,7 +2677,7 @@ p {
 }
 
 .recent-activity td.recent-ac-text {
-    ` color: #303030;
+     color: #303030;
 }
 
 .recent-activity td.recent-ac-text span {
@@ -3061,3 +3061,4 @@ p {
         color: lightgrey;
     }
 }
+
