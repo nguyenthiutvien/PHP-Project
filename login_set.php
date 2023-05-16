@@ -19,7 +19,6 @@ public function login(){
     $kt=0;
     if(($user=="admin")&&($pass=="vienvienvien")){
         echo "<script>alert('WELLCOME TO ADMIN !!!')</script>";
-        
     }
     else{
     $query1="select * from account";
