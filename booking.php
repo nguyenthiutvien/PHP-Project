@@ -15,7 +15,7 @@ if($name==$name2){
 }
 }
 }
-if(!$id){
+if($id){
     echo "<script>alert('YOU ARE NOT LOGGED IN !!!')</script>";
     echo "<script>window.location.replace('index.php')</script>";
 }else{
@@ -33,39 +33,7 @@ echo "<script>alert('ADD TO CART SUCCESSFULLY !!!')</script>";
 echo "<script>window.location.replace('index.php')</script>";
 }
 
-if(!$id){
-    echo "<script>alert('YOU ARE NOT LOGGED IN !!!')</script>";
-    echo "<script>window.location.replace('index.php')</script>";
-}else{
-$query="select * from tour_sport where id_sport='$id_tour'";
-$result3=mysqli_query($link,$query);
-while($row3=mysqli_fetch_assoc($result3)){
-    $image=$row3['img_sport'];
-    $name=$row3['name_sport'];
-    $price=$row3['price_sport'];
-    $from_to=$row3['from_to_sport'];
-   }
-   $query="insert into cart(image_tour,id_account,id_tour,name_tour,price_tour,from_to,status) value ('$image',$id,$id_tour,'$name',$price,'$from_to','checking in')";$result=mysqli_query($link,$query);
-echo "<script>alert('ADD TO CART SUCCESSFULLY !!!')</script>";
-echo "<script>window.location.replace('index.php')</script>";
-}
-if(!$id){
-    echo "<script>alert('YOU ARE NOT LOGGED IN !!!')</script>";
-    echo "<script>window.location.replace('index.php')</script>";
-}else{
-$query="select * from tour_hot where id_hot='$id_tour'";
-$result3=mysqli_query($link,$query);
-while($row3=mysqli_fetch_assoc($result3)){
-    $image=$row3['img_hot'];
-    $name=$row3['name_hot'];
-    $price=$row3['price_hot'];
-    $from_to=$row3['from_to_hot'];
-   }
-$query="insert into cart(image_tour,id_account,id_tour,name_tour,price_tour,from_to,status) value ('$image',$id,$id_tour,'$name',$price,'$from_to','checking in')";
-$result=mysqli_query($link,$query);
-echo "<script>alert('ADD TO CART SUCCESSFULLY !!!')</script>";
-echo "<script>window.location.replace('index.php')</script>";
-}
+
 
 ?>
-?>
+

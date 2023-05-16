@@ -1,8 +1,7 @@
-<!doctype html>
-<html lang="en">
+<html>
 
 <head>
-    <title>TRAVEL DANA</title>
+    <title>Index HTML</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -14,40 +13,97 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- Font Awesome Stylesheet -->
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
     <!-- Custom Stylesheets -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" id="cpswitch" href="./css/orange.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" id="cpswitch" href="css/orange.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- Owl Carousel Stylesheet -->
-    <link rel="stylesheet" href="./css/owl.carousel.css">
-    <link rel="stylesheet" href="./css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
 
     <!-- Flex Slider Stylesheet -->
-    <link rel="stylesheet" href="./css/flexslider.css" type="text/css" />
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
 
     <!--Date-Picker Stylesheet-->
-    <link rel="stylesheet" href="./css/datepicker.css">
+    <link rel="stylesheet" href="css/datepicker.css">
 
     <!-- Magnific Gallery -->
-    <link rel="stylesheet" href="./css/magnific-popup.css">
-    <!-- <script src="js/index.js"></script> -->
- 
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <style type="text/css">
+        td {
+            vertical-align: middle;
+        }
+
+        @media screen and (max-width: 600px) {
+            table#cart tbody td .form-control {
+                width: 20%;
+                display: inline !important;
+            }
+
+            .actions .btn {
+                width: 36%;
+                margin: 1.5em 0;
+            }
+
+            .actions .btn-info {
+                float: left;
+            }
+
+            .actions .btn-danger {
+                float: right;
+            }
+
+            table#cart thead {
+                display: none;
+            }
+
+            table#cart tbody td {
+                display: block;
+                padding: .6rem;
+                min-width: 320px;
+            }
+
+            table#cart tbody tr td:first-child {
+                background: #333;
+                color: #fff;
+            }
+
+            table#cart tbody td:before {
+                content: attr(data-th);
+                font-weight: bold;
+                display: inline-block;
+                width: 8rem;
+            }
+
+            table#cart tfoot td {
+                display: block;
+            }
+
+            table#cart tfoot td .btn {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
-
-<body id="main-homepage">
+<body>
 
     <!--====== LOADER =====-->
-    <!-- <div class="loader"></div> -->
+    <div class="loader"></div>
 
 
     <!--======== SEARCH-OVERLAY =========-->
-    <?php
-   @include('header.php');
-   ?>
+<?php
+@include('header.php')
+?>
     <!--================= PAGE-COVER ================-->
     <section class="page-cover" id="cover-byf-info">
         <div class="container">
@@ -82,7 +138,7 @@
                         <th style="width:200%"><b></b></th>
                         <td class="hidden-xs text-center"></strong>
                         </td>
-                        <td><a href="#" class="btn btn-success btn-block">HISTORY <i class="fa fa-angle-right"></i></a>
+                        <td><a href="history.php" class="btn btn-success btn-block">HISTORY <i class="fa fa-angle-right"></i></a>
                         </td>
                     </tr>
                 </thead>
@@ -130,11 +186,11 @@
                             $total = $total + $price;
                             echo $table = "
                                         <tr>
-                                            <td><img src='images/$image' height='100' width='150'></td>
+                                            <td><img src='images/$image' height='200' width='250'></td>
                                             <td>$name</td>
                                             <td>$from_to</td>
                                             <td>$price $</td>  
-                                            <td><a href='#'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
+                                            <td><a href='payment.php?idd=$idd'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
                                             <td><a href='delete_cart.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
                                         </tr>
                                         ";
@@ -160,27 +216,22 @@
     </div>
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     <!--======================= FOOTER =======================-->
-    <?php
-   @include('footer.php');
-   ?>
-<!-- end footer -->
+<?php
+@include('footer.php');
+?>
+    <!-- end footer -->
 
-
-<!-- Page Scripts Starts -->
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/custom-navigation.js"></script>
-<script src="js/custom-flex.js"></script>
-<script src="js/custom-owl.js"></script>
-<script src="js/custom-date-picker.js"></script>
-<script src="js/custom-video.js"></script>
-<script src="js/login.js"></script>
-<!-- Page Scripts Ends -->
-
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom-navigation.js"></script>
+    <script src="js/custom-flex.js"></script>
+    <script src="js/custom-owl.js"></script>
+    <script src="js/custom-date-picker.js"></script>
+    <script src="js/custom-video.js"></script>
 </body>
 
 </html>

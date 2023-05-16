@@ -183,7 +183,7 @@
                     <li class="dropdown"><a href="aboutus.php" >ABOUT US</a>
                         
                     </li>
-                    <li class="dropdown"><a href="contact.php">CONTACT</a>
+                    <li class="dropdown"><a href="contact_us.php">CONTACT</a>
                        
                     </li>
                     <li class="dropdown"><a href="#" >Account<span><i class="fa fa-angle-down"></i></span></a>
@@ -773,7 +773,7 @@
     <!-- end video-banner -->
 
     
-        <!--=============== HOTEL OFFERS ===============-->
+        <!--=============== tour hout ===============-->
         <section id="hotel-offers" class="section-padding">
         <div class="container">
             <?php
@@ -812,7 +812,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <a href="booking_hot.php?id=' . $id_hot . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                        <a href="booking.php?id=' . $id_hot . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -1049,7 +1049,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <a href="booking_sport.php?id=' . $id_sport . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                                <a href="booking.php?id=' . $id_sport . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                             </div>
                                         </div>
                                     </div>
