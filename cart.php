@@ -128,7 +128,6 @@
         <div class="container">
             <table id="cart" class="table table-hover table-condensed">
                 <thead>
-
                     <tr>
                         <td><a href="index.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> CONTINUE BUYING</a>
                         </td>
@@ -190,7 +189,9 @@
                                             <td>$name</td>
                                             <td>$from_to</td>
                                             <td>$price $</td>  
+                                            <td>
                                             <td><a href='payment.php?idd=$idd'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
+                                          
                                             <td><a href='delete_cart.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
                                         </tr>
                                         ";

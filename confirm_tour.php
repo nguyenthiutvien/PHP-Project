@@ -49,5 +49,5 @@ $alert = '';
               </div>';
   }                                                   
 
-header("location: Admin/admin.php");                                                                                
+header("location: admin.php");                                                                                
 ?>

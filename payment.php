@@ -57,6 +57,8 @@
     <!--======== SEARCH-OVERLAY =========-->
         <?php
         @include('header.php');
+        $idd=$_GET['idd'];
+        $total = 0;
         ?>
     <!-- end navbar -->
 
@@ -162,7 +164,10 @@
                         <div class="flex-content">
                             <div class="custom-form custom-form-fields">
                                 <h3>Payment</h3>
-                                <form action="" method="post">
+                                
+                                <form method='POST' target='_blank' enctype='application/x-www-form-urlencoded' action="./paymentMomo.php?id=<?php
+                                echo $idd
+                                ?>">
                                 
                                     <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6">
                                     <label>Name: </label>
@@ -234,8 +239,7 @@
                                             }
                                         }
                                     }
-                                    $idd=$_GET['idd'];
-                                    $total = 0;
+                                    
                                    
                        
                                     $queryquery = "select * from cart where id_account='$id' and id_cart = '$idd'";
@@ -294,7 +298,9 @@
                                         <label></label>
                                     </div>
                                     <div class="col-xs-4 col-sm-4 col-md-5 col-lg-4">
-                                        <a href='https://sandbox.vnpayment.vn/tryitnow/Home/CreateOrder'> class="btn btn-orange btn-block" name="pay">Pay</a>
+                        
+                                                <input  class='btn btn-success bt' type='submit' name='momo' value='PAY'>          
+                                       
                                     </div>
                                     <div class="col-xs-4 col-sm-4 col-md-5 col-lg-4">
                                         <label></label>

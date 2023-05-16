@@ -15,7 +15,7 @@ if($name==$name2){
 }
 }
 }
-if($id){
+if(!$id){
     echo "<script>alert('YOU ARE NOT LOGGED IN !!!')</script>";
     echo "<script>window.location.replace('index.php')</script>";
 }else{

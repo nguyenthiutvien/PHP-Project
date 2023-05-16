@@ -1047,6 +1047,7 @@
                             </thead>
                             <tbody class="text-center">
                             <?php
+                            
                             $email=null;
                             $link=new mysqli("localhost","root","","traveldana");
                                $queryquery = "select * from cart";

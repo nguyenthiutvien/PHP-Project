@@ -18,7 +18,15 @@ function time_elapsed_string($datetime, $full = false) {
     $diff = $now->diff($ago);
     $diff->w = floor($diff->d / 7);
     $diff->d -= $diff->w * 7;
-    $string = array('y' => 'year', 'm' => 'month', 'w' => 'week', 'd' => 'day', 'h' => 'hour', 'i' => 'minute', 's' => 'second');
+    $string = array(
+        'y' => 'year',
+        'm' => 'month',
+        'w' => 'week',
+        'd' => 'day',
+        'h' => 'hour',
+        'i' => 'minute',
+        's' => 'second'
+    );
     foreach ($string as $k => &$v) {
         if ($diff->$k) {
             $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
@@ -27,7 +35,7 @@ function time_elapsed_string($datetime, $full = false) {
         }
     }
     if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' ago' : 'just now';
+    return $string ? $ago->format('d/m/Y H:i') : 'just now';
 }
 
 // Chức năng này sẽ điền vào các bình luận và trả lời bình luận bằng một vòng lặp
