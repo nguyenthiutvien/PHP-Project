@@ -1042,7 +1042,7 @@
                                                         <h5 class="card-title">' . $name_sport . '</h5>
                                                         <p class="card-text">' . $detail_sport . '</p>
                                                         <p class="card-text">From: ' . $from_to_sport . '</p>
-                                                        <p class="card-text"><medium class="text-muted"><b>$' . $price_sport . '</b></medium></p>
+                                                        <p class="card-text"><medium class="text-muted"><b>' . $price_sport . '</b></medium></p>
                                                         </div>
                                                     </div>
                                                 </div>

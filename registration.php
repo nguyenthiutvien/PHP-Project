@@ -173,7 +173,7 @@ document.SignIn.user.focus();
                             <!-- end custom-form -->
 
                             <div class="flex-content-img custom-form-img">
-                                <img src="images/Ngam_nhung_hinh_anh_tuyet_dep_ve_Viet_Nam_tren_bao_Anh_15.jpg" class="img-responsive" alt="registration-img" />
+                                <img src="images/danang.jpg" class="img-responsive" alt="registration-img" />
                             </div>
                             <!-- end custom-form-img -->
                         </div>

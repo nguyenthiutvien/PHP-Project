@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>STARTTRAVEL</title>
+    <title>TRAVELDANA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -241,7 +241,7 @@
                                     }
                                     
                                    
-                       
+                                   error_reporting(0);
                                     $queryquery = "select * from cart where id_account='$id' and id_cart = '$idd'";
                                     $resultresult = mysqli_query($link, $queryquery);
                                     while ($rowrow = mysqli_fetch_assoc($resultresult)) {
