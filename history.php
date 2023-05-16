@@ -101,9 +101,10 @@
 
 
     <!--======== SEARCH-OVERLAY =========-->
-<?php
-@include('header.php')
-?>
+    <?php
+   @include('header.php');
+   ?>
+    <!-- end sidenav-content -->
     <!--================= PAGE-COVER ================-->
     <section class="page-cover" id="cover-byf-info">
         <div class="container">
@@ -128,6 +129,7 @@
         <div class="container">
             <table id="cart" class="table table-hover table-condensed">
                 <thead>
+
                     <tr>
                         <td><a href="index.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> CONTINUE BUYING</a>
                         </td>
@@ -137,7 +139,7 @@
                         <th style="width:200%"><b></b></th>
                         <td class="hidden-xs text-center"></strong>
                         </td>
-                        <td><a href="history.php" class="btn btn-success btn-block">HISTORY <i class="fa fa-angle-right"></i></a>
+
                         </td>
                     </tr>
                 </thead>
@@ -153,8 +155,8 @@
                             <th>NAME</th>
                             <th>FROM_TO</th>
                             <th>PRICE</th>
-                            <th>PAY</th>
-                            <th>TOOL</th>
+                            <th>STATUS</th>
+                            <th>DELETE</th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
@@ -174,14 +176,15 @@
                             }
                         }
                         $total = 0;
-                        $queryquery = "select * from cart where id_account='$id'";
+                        $queryquery = "select * from history where id_account='$id'";
                         $resultresult = mysqli_query($link, $queryquery);
                         while ($rowrow = mysqli_fetch_assoc($resultresult)) {
-                            $idd = $rowrow['id_cart'];
+                            $idd = $rowrow['id_history'];
                             $image = $rowrow['image_tour'];
                             $name = $rowrow['name_tour'];
                             $price = $rowrow['price_tour'];
                             $from_to = $rowrow['from_to'];
+                            $status=$rowrow['status'];
                             $total = $total + $price;
                             echo $table = "
                                         <tr>
@@ -189,15 +192,8 @@
                                             <td>$name</td>
                                             <td>$from_to</td>
                                             <td>$price $</td>  
-
-                                            <td>
-                                            <form method='POST' target='_blank' enctype='application/x-www-form-urlencoded' action='./paymentMomo.php?id=$idd'>
-                                                <input  class='btn btn-success bt' type='submit' name='momo' value='PAY'>
-                                            </form></td>           
-
-                                            <td><a href='payment.php?idd=$idd'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
-
-                                            <td><a href='delete_cart.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
+                                            <td>$status</td>  
+                                            <td><a href='delete_history.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
                                         </tr>
                                         ";
                         }
@@ -222,9 +218,9 @@
     </div>
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     <!--======================= FOOTER =======================-->
-<?php
-@include('footer.php');
-?>
+    <?php
+   @include('footer.php');
+   ?>
     <!-- end footer -->
 
     <script src="js/jquery.min.js"></script>

@@ -25,210 +25,15 @@
 
 <body>
 
-    <!--====== LOADER =====-->
-    <div class="loader"></div>
-
-
-    <!--======== SEARCH-OVERLAY =========-->
-    <div class="overlay">
-        <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
-        <div class="overlay-content">
-            <div class="form-center">
-                <form>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search..." required />
-                            <span class="input-group-btn"><button type="submit" class="btn"><span><i class="fa fa-search"></i></span></button>
-                            </span>
-                        </div>
-                        <!-- end input-group -->
-                    </div>
-                    <!-- end form-group -->
-                </form>
-            </div>
-            <!-- end form-center -->
-        </div>
-        <!-- end overlay-content -->
-    </div>
-    <!-- end overlay -->
-
-    <!--====== LOADER =====-->
-    <div class="loader"></div>
-
-
-    <!--======== SEARCH-OVERLAY =========-->
-    <div class="overlay">
-        <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
-        <div class="overlay-content">
-            <div class="form-center">
-                <form>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search..." required />
-                            <span class="input-group-btn"><button type="submit" class="btn"><span><i class="fa fa-search"></i></span></button>
-                            </span>
-                        </div>
-                        <!-- end input-group -->
-                    </div>
-                    <!-- end form-group -->
-                </form>
-            </div>
-            <!-- end form-center -->
-        </div>
-        <!-- end overlay-content -->
-    </div>
-    <!-- end overlay -->
-
-
-    <!--============= TOP-BAR ===========-->
-    <div id="top-bar" class="tb-text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    
-                    <!-- end info -->
-                </div>
-                <!-- end columns -->
-
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <div id="links">
-                        <ul class="list-unstyled list-inline">
-                            <li><a href="login.php" id="thanh1"><span><i class="fa fa-lock"></i></span>Login</a></li>
-                            <li><a href="registration.php" id="thanh2"><span><i class="fa fa-plus"></i></span>Sign up</a></li>
-                            <li><a href="logout.php" id="thanh3"><span><i class="fa fa-sign-out"></i></span>Logout</a></li>
-                            <li><a href="cart.php" id="thanh4"><span><i class="fa fa-shopping-cart"></i></span>Cart</a>
-                            <li>
-                               
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end links -->
-                </div>
-                <!-- end columns -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </div>
-    <!-- end top-bar -->
     
-    <nav class="navbar navbar-default main-navbar navbar-custom navbar-white" id="mynavbar-1">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" id="menu-button">
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>                        
-                 </button>
-                <div class="header-search hidden-lg">
-                    <a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a>
-                </div>
-                <a href="index.php" class="navbar-brand"><span><i class="fa fa-plane"></i>TRAVEL</span>DANA</a>
-            </div>
-            <!-- end navbar-header -->
 
-            <div class="collapse navbar-collapse" id="myNavbar1">
-                <ul class="nav navbar-nav navbar-right navbar-search-link">
-                    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span><i class="fa fa-angle-down"></i></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="active"><a href="index.php">Main Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Cruise Homepage</a></li>
-                            <li><a href="cruise-homepage.php">Harzadous Sports Tour Homepage</a></li>
-                            <li><a href="blog-listing-right-sidebar.php">Blog Homepage</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<span><i class="fa fa-angle-down"></i></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="logout.php">Login Homepage</a></li>
-                            <li><a href="registration.php">Registration Homepage</a></li>
-                            <li><a href="forgot-password.php">Forgot Password Homepage</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs<span><i class="fa fa-angle-down"></i></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog-listing-right-sidebar.php">Blog Homepage</a></li>
-                            <li><a href="about-us.php">About Us</a></li>
-                            <li><a href="contact-us.php">Contact Us</a></li>
-                            <li><a href="#">Coming Soon</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tours<span><i class="fa fa-angle-down"></i></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="cruise-homepage.php">Tour Homepage</a></li>
-                            <li><a href="before-you-fly.php">Before You Fly</a></li>
-                            <li><a href="travel-insurance.php">Travel insurance</a></li>
-                            <li><a href="holidays.php">Holidays</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Cruise<span><i class="fa fa-angle-down"></i></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="cruise-homepage.php">Cruise Homepage</a></li>
-                            <li><a href="before-you-fly.php">Before You Fly</a></li>
-                            <li><a href="travel-insurance.php">Travel insurance</a></li>
-                            <li><a href="holidays.php">Holidays</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages<span><i class="fa fa-angle-down"></i></span></a>
-                        <ul class="dropdown-menu mega-dropdown-menu row">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <ul class="list-unstyled">
-                                            <li class="dropdown-header">Standard <span>Pages</span></li>
-                                            <li><a href="about-us.php">About Us</a></li>
-                                            <li><a href="contact-us.php">Contact Us</a></li>
-                                            <li><a href="blog-listing-right-sidebar.php">Blog Listing Right Sidebar</a></li>
-                                            <li><a href="blog-detail-right-sidebar.php">Blog Detail Right Sidebar</a></li>
-                                        </ul>
-                                    </div>
 
-                                    <div class="col-md-3">
-                                        <ul class="list-unstyled">
-                                            <li class="error-page.php">User <span>Dashboard</span></li>
-                                            <li><a href="error-page.php">Dashboard</a></li>
-                                            <li><a href="error-page.php">User Profile</a></li>
-                                            <li><a href="error-page.php">Booking</a></li>
-                                            <li><a href="error-page.php">Wishlist</a></li>
-                                            <li><a href="error-page.php">Cards</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <ul class="list-unstyled">
-                                            <li class="dropdown-header">Special <span>Pages</span></li>
-                                            <li><a href="logout.php">Login</a></li>
-                                            <li><a href="registration.php">Registration</a></li>
-                                            <li><a href="forgot-password.php">Forgot Password</a></li>
-                                            <li><a href="error-page.php">404 Page</a></li>
-                                            <li><a href="#">Coming Soon</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <ul class="list-unstyled">
-                                            <li class="dropdown-header">Extra <span>Pages</span></li>
-                                            <li><a href="before-you-fly.php">Before Fly</a></li>
-                                            <li><a href="travel-insurance.php">Travel Insurance</a></li>
-                                            <li><a href="holidays.php">Holidays</a></li>
-                                            <li><a href="thank-you.php">Thank You</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a></li>
-                </ul>
-            </div>
-            <!-- end navbar collapse -->
-        </div>
-        <!-- end container -->
-    </nav>
+    <!--======== SEARCH-OVERLAY =========-->
+   
     <!-- end navbar -->
     <div class="sidenav-content">
         <div id="mySidenav" class="sidenav">
-            <h2 id="web-name"><span><i class="fa fa-plane"></i></span>Travel dana</h2>
+            <h2 id="web-name"><span><i class="fa fa-plane"></i></span>Star Travel</h2>
 
             <div id="main-menu">
                 <div class="closebtn">
@@ -380,7 +185,7 @@ if (isset($_POST['login'])){
                             <!-- end custom-form -->
 
                             <div class="flex-content-img custom-form-img">
-                                <img src="images/danang.jpg" class="img-responsive" alt="registration-img" />
+                                <img src="images/ve-dep-viet-nam-vnexpress-2-1584434502.jpg" class="img-responsive" alt="registration-img" />
                             </div>
                             <!-- end custom-form-img -->
                         </div>
@@ -475,94 +280,9 @@ if (isset($_POST['login'])){
 
 
     <!--======================= FOOTER =======================-->
-    <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
-
-        <div id="footer-top" class="banner-padding ftr-top-grey ftr-text-white">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 footer-widget ftr-contact">
-                        <h3 class="footer-heading">CONTACT US</h3>
-                        <ul class="list-unstyled">
-                            <li><span><i class="fa fa-map-marker"></i></span>Passerellesnumériques Viet Nam</li>
-                            <li><span><i class="fa fa-phone"></i></span>+00 964 988 91</li>
-                            <li><span><i class="fa fa-envelope"></i></span>hothibich@gmail.com</li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 footer-widget ftr-links">
-                        <h3 class="footer-heading">COMPANY</h3>
-                        <ul class="list-unstyled">
-                        <li><a href="index.php">Home</a></li>
-                            <li><a href="cruise-homepage.php">Flight</a></li>
-                            <li><a href="cruise-homepage.php">Hotel</a></li>
-                            <li><a href="cruise-homepage.php">Tours</a></li>
-                            <li><a href="cruise-homepage.php">Cruise</a></li>
-                            <li><a href="cruise-homepage.php">Cars</a></li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 footer-widget ftr-links ftr-pad-left">
-                        <h3 class="footer-heading">RESOURCES</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="blog-listing-right-sidebar.php">Blogs</a></li>
-                            <li><a href="contact-us.php">Contact Us</a></li>
-                            <li><a href="logout.php">Login</a></li>
-                            <li><a href="registration.php">Register</a></li>
-                            <li><a href="index.php">Site Map</a></li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-about">
-                        <h3 class="footer-heading">ABOUT US</h3>
-                        <p>We will bring you the journeys, the greatest experiences in your life. Your happiness and satisfaction are a motive power that impulse us to develop and improve. Thanks for your confidence and interaction. Hope you have a fantastic
-                            journeys!!
-                        </p>
-                        <ul class="social-links list-inline list-unstyled">
-                            <li><a href="https://www.facebook.com/"><span><i class="fa fa-facebook"></i></span></a></li>
-                            <li><a href="https://twitter.com/"><span><i class="fa fa-twitter"></i></span></a></li>
-                            <li><a href="https://google.com/"><span><i class="fa fa-google-plus"></i></span></a></li>
-                            <li><a href="https://pinterest.com/"><span><i class="fa fa-pinterest-p"></i></span></a></li>
-                            <li><a href="https://instagram.com/"><span><i class="fa fa-instagram"></i></span></a></li>
-                            <li><a href="https://linkedin.com/"><span><i class="fa fa-linkedin"></i></span></a></li>
-                            <li><a href="https://youtube.com/"><span><i class="fa fa-youtube-play"></i></span></a></li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end footer-top -->
-
-        <div id="footer-bottom" class="ftr-bot-black">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="copyright">
-                        <p>© 2021 <a href="index.php">StartTravel</a>. All rights reserved.</p>
-                    </div>
-                    <!-- end columns -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="terms">
-                        <ul class="list-unstyled list-inline">
-                            <li><a href="index.php">Terms & Condition</a></li>
-                            <li><a href="index.php">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end footer-bottom -->
-
-    </section>
+    <?php
+   @include('footer.php');
+   ?>
     <!-- end footer -->
     </section>
     <!-- end footer -->

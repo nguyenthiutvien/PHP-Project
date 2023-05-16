@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Registration</title>
+    <title>Forgot Password</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+
     <!-- Bootstrap Stylesheet -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -20,100 +20,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" id="cpswitch" href="css/orange.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <style>
-        #number {
-            display: none;
-        }
-        
-        #submit {
-            display: none;
-        }
-        #submit2 {
-            display: none;
-        }
-    </style>
-      <script type="text/javascript">
-      function show2(){
-        document.getElementById("submit").style.display = "none";
-        document.getElementById("submit2").style.display = "block";
-      }
-          function show() {
-            var user = document.getElementById('user').value;
-    var email = document.getElementById('email').value;
-    var pass = document.getElementById('pass').value;
-    var repass = document.getElementById('repass').value;
-    if (user.length < 3) {
-        alert("Username must contain at least 3 characters!");
-        document.SignIn.user.focus();
-    } else if (pass.length == 0) {
-        alert("Password cannot be empty!");
-        document.SignIn.pass.focus();
-    } else if (pass != repass) {
-        alert(" Password must match!");
-        document.SignIn.pass.focus();
-    } else if (email.length == 0) {
-        alert("Wrong mail format!");
-        document.SignIn.email.focus();
-    } else {
-        document.getElementById("number").style.display = "block";
-    document.getElementById("register").style.display = "none";
-    document.getElementById("submit").style.display = "block";
-        }
-    }
-    var code;
-    $(document).ready(function(){
-    $('#register').click(function(){
-        var txt= $('#email').val();
-        alert("Please check the erification code !!!");
-        $.post('sendmail.php',{data: txt},function(data){
-         code=data;
-        })
-    })
-    $('#submit2').click(function(){
-            alert("Please wait for the admin to confirm !!!");
-})
-    $('#submit').click(function(){
-        var code2= $('#number').val();
-        if(code==code2){
-            alert("Enter the code successfully. Please submit information!!!");
-            show2();
-}
-        else{
-alert("The verification code is wrong. Please re-enter !!!");
-document.SignIn.user.focus();
-        }
-    })
-})
-    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 
 <body>
-<?php
-             include ('sign_up.php');
-             if(isset($_POST['submit2'])){
-         //    if(isset($_POST['submit'])){
-                $account=new account();
-            $account->create();}
-//}
-            ?>
-    <!--====== LOADER =====-->
+
+
+
+
     <!--======== SEARCH-OVERLAY =========-->
-<?php
-@include("header")
-?>
-    <!-- end sidenav-content -->
+    <?php
+   @include('header.php');
+   ?>
 
-
-    <!--================ PAGE-COVER =================-->
-    <section class="page-cover" id="cover-registration">
+    <!--================== PAGE-COVER ==================-->
+    <section class="page-cover" id="cover-forgot-password">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1 class="page-title">Registration Page</h1>
+                    <h1 class="page-title">Forgot Password Page</h1>
                     <ul class="breadcrumb">
                         <li><a href="index.php">Home</a></li>
-                        <li class="active">Registration Page</li>
+                        <li class="active">Forgot Password Page</li>
                     </ul>
                 </div>
                 <!-- end columns -->
@@ -123,57 +52,96 @@ document.SignIn.user.focus();
         <!-- end container -->
     </section>
     <!-- end page-cover -->
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+if(isset($_POST['register2'])){
+ini_set("display_errors",0);
+$user=$_POST['user'];
+$email=$_POST['email'];
+$kt=0;
+$link=new mysqli("localhost","root","","traveldana");
+$query="select * from account";
+$result=mysqli_query($link,$query);
+if(mysqli_num_rows($result)){
+while($row=mysqli_fetch_assoc($result)){
+    if (($user==$row['account_name'])&&($email==$row['account_email'])){
+        $kt=1;
+        $pass=$row['account_pass'];
+        require_once 'PHPMailer/Exception.php';
+        require_once 'PHPMailer/PHPMailer.php';
+        require_once 'PHPMailer/SMTP.php';
+        
+        $mail = new PHPMailer();
+        $email=$row['account_email'];
+        $alert = '';
+        try{
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'xtai0781@gmail.com'; 
+            $mail->Password = 'jaeechnvfbzmpsko';
+            $mail->Port = 465;
+            $mail->SMTPSecure = "ssl";
+        
+            $mail->setFrom('xtai0781@gmail.com', 'Admin');
+            $mail->addAddress($email);
+        
+            $mail->isHTML(true);
+            $mail->Subject = "FOR-GOT PASSWORD";
+            $mail->Body = "USERNAME: $user   PASSWORD: $pass</h3>";
+        
+            $mail->send();
+            $alert = '<div class="alert-success"> 
+                         <span>Message Sent! Thank you for contacting us.</span>
+                        </div>';
+          } catch (Exception $e){
+            $alert = '<div class="alert-error">
+                        <span>'.$e->getMessage().'</span>
+                      </div>';
+          }        
+    }
+}
+if($kt==0){
+    echo "<script>alert('THE USERNAME OR EMAIL DOES NOT EXIST !!!')</script>";
+}else{
+    echo "<script>alert('PLEASE CHECK PASSWORD IN YOUR EMAIL !!!')</script>";
+}
+}}
+?>
     <!--===== INNERPAGE-WRAPPER ====-->
     <section class="innerpage-wrapper">
-        <div id="registration" class="innerpage-section-padding">
+        <div id="forgot-password" class="innerpage-section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
 
                         <div class="flex-content">
                             <div class="custom-form custom-form-fields">
-                                <h3>Registration</h3>
-                                <p>Welcome to Starttravel. Your informations will be secured carefully. Please fill informations fully. Contact us if you get any problems.</p>
+                                <h3>Forgot Password</h3>
+                                <p>When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>
                                 <form action="" method="post">
-
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Username" id="user" name="account_name" value =""required/>
+                                        <input type="text" class="form-control" placeholder="Your User Name" id="user" name="user" required/>
                                         <span><i class="fa fa-user"></i></span>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email" id="email" name="account_email" required/>
+                                        <input type="text" class="form-control" placeholder="Your Email" id="email" name="email" required/>
                                         <span><i class="fa fa-envelope"></i></span>
                                     </div>
-
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="Password" id="pass" name="account_pass" required/>
-                                        <span><i class="fa fa-lock"></i></span>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" id="repass" placeholder="Confirm Password" name="account_confirm" required/>
-                                        <span><i class="fa fa-lock"></i></span>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="number" placeholder="Codes" />
-                                    </div>
-                                    <input type="button" class="btn btn-orange btn-block" id="register" name="register" value="Register"  onclick="<?php
-               echo 'show();';
-           ?>">
-                                    <input type="button" class="btn btn-orange btn-block" id="submit" name="submit" value="Check Code" >
-                                    <input type="submit" class="btn btn-orange btn-block" id="submit2" name="submit2" value="Submit">
+                                    <input type="submit" class="btn btn-orange btn-block" id="register" placeholder="Register" name="register2">
                                 </form>
-
+                              
                                 <div class="other-links">
                                     <p class="link-line">Already Have An Account ? <a href="login.php">Login Here</a></p>
+                                    <p class="link-line">New Here ? <a href="registration.php">Join Us</a></p>
                                 </div>
                                 <!-- end other-links -->
                             </div>
                             <!-- end custom-form -->
 
                             <div class="flex-content-img custom-form-img">
-                                <img src="images/Ngam_nhung_hinh_anh_tuyet_dep_ve_Viet_Nam_tren_bao_Anh_15.jpg" class="img-responsive" alt="registration-img" />
+                                <img src="images/ve-dep-viet-nam-vnexpress-2-1584434502.jpg" class="img-responsive" alt="registration-img" />
                             </div>
                             <!-- end custom-form-img -->
                         </div>
@@ -186,9 +154,11 @@ document.SignIn.user.focus();
             </div>
             <!-- end container -->
         </div>
-        <!-- end registration -->
+        <!-- end forgot-password -->
     </section>
     <!-- end innerpage-wrapper -->
+
+
     <!--======================= BEST FEATURES =====================-->
     <section id="best-features" class="banner-padding black-features">
         <div class="container">
@@ -266,9 +236,11 @@ document.SignIn.user.focus();
 
 
     <!--======================= FOOTER =======================-->
-   <?php
+    <?php
    @include('footer.php');
    ?>
+    <!-- end footer -->
+    </section>
     <!-- end footer -->
 
 

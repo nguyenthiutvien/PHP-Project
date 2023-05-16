@@ -32,4 +32,8 @@ $result=mysqli_query($link,$query);
 echo "<script>alert('ADD TO CART SUCCESSFULLY !!!')</script>";
 echo "<script>window.location.replace('index.php')</script>";
 }
+
+
+
 ?>
+

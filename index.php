@@ -11,28 +11,28 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
     <!-- Bootstrap Stylesheet -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 
     <!-- Font Awesome Stylesheet -->
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" id="cpswitch" href="css/orange.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" id="cpswitch" href="./css/orange.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 
     <!-- Owl Carousel Stylesheet -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.css">
 
     <!-- Flex Slider Stylesheet -->
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+    <link rel="stylesheet" href="./css/flexslider.css" type="text/css" />
 
     <!--Date-Picker Stylesheet-->
-    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
 
     <!-- Magnific Gallery -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="./css/magnific-popup.css">
     <!-- <script src="js/index.js"></script> -->
  
 </head>
@@ -40,12 +40,8 @@
 
 <body id="main-homepage">
 
-    <!--====== LOADER =====-->
-    <!-- <div class="loader"></div> -->
-
-
     <!--======== SEARCH-OVERLAY =========-->
-    <div class="overlay">
+ <div class="overlay">
         <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
         <div class="overlay-content">
             <div class="form-center">
@@ -184,10 +180,10 @@
                        
                     </li>
                   
-                    <li class="dropdown"><a href="#" >ABOUT US</a>
+                    <li class="dropdown"><a href="aboutus.php" >ABOUT US</a>
                         
                     </li>
-                    <li class="dropdown"><a href="contact.php">CONTACT</a>
+                    <li class="dropdown"><a href="contact_us.php">CONTACT</a>
                        
                     </li>
                     <li class="dropdown"><a href="#" >Account<span><i class="fa fa-angle-down"></i></span></a>
@@ -777,7 +773,7 @@
     <!-- end video-banner -->
 
     
-        <!--=============== HOTEL OFFERS ===============-->
+        <!--=============== tour hout ===============-->
         <section id="hotel-offers" class="section-padding">
         <div class="container">
             <?php
@@ -816,7 +812,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <a href="booking_hot.php?id=' . $id_hot . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                        <a href="booking.php?id=' . $id_hot . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -964,7 +960,7 @@
 
                     <div class="row">
                         <?php
-                        // include ("admin_set.php");
+                 
                         $tourSport = new tourSport();
                         $sql = "select * from tour_sport";
                         $rows = $tourSport->fetch($sql);
@@ -1053,7 +1049,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <a href="booking_sport.php?id=' . $id_sport . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                                <a href="booking.php?id=' . $id_sport . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1154,77 +1150,6 @@
 
 
 
-    <!--================ LATEST BLOG ==============-->
-    <section id="latest-blog" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="page-heading">
-                        <h2>Our Latest Blogs</h2>
-                        <hr class="heading-line" />
-                    </div>
-
-                    <div class="row">
-                        <?php
-                        $tourCapital = new blog();
-                        $sql = "select * from blog";
-                        $rows = $tourCapital->fetch($sql);
-                        if (!empty($rows)) {
-                            foreach ($rows as $row) {
-                                $id_blog = $row['id_blog'];
-                                $img_blog = $row['img_blog'];
-                                $author_blog = $row['author_blog'];
-                                $time_blog = $row['time_blog'];
-                                $title_blog = $row['title_blog'];
-                                $content_blog = $row['content_blog'];
-                                echo "<div class='col-sm-6 col-md-4'>
-                                        <div class='main-block latest-block'>
-
-                                            <div class='main-img latest-img'>
-                                                <a href='blog-detail-right-sidebar.php'>
-                                                    <img src='images/$img_blog' class='img-responsive' alt='blog-img'/>
-                                                </a>
-                                            </div>
-
-                                            <div class='latest-info'>
-                                                <ul class='list-unstyled'>
-                                                    <li><span><i class='fa fa-calendar-minus-o'></i></span>$time_blog<span class='author'>by: <a href='blog-detail-right-sidebar.php'>$author_blog</a></span></li>
-                                                </ul>
-                                            </div>
-                                            <div class='main-info latest-desc'>
-                                                <div class='row'>
-                                                    <div class='col-xs-10 col-sm-10 main-title'>
-                                                        <a href='blog-detail-right-sidebar.php'>$title_blog</a>
-                                                        <p>$content_blog</p>
-                                                    </div>
-                                                </div>
-                                                <span class='arrow'><a href='blog-listing-right-sidebar.php'><i class='fa fa-angle-right'></i></a></span>
-                                            </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                            
-                                    ";
-                            }
-                        }
-                        ?>
-                    </div>
-                    <!-- end row -->
-
-                    <div class="view-all text-center">
-                        <a href="blog-listing-right-sidebar.php" class="btn btn-orange">View All</a>
-                    </div>
-                    <!-- end view-all -->
-                </div>
-                <!-- end columns -->
-            </div>
-            <!-- end row -->
-        </div>
-        <!-- end container -->
-    </section>
-    <!-- end latest-blog -->
-
 
     <!--========================= NEWSLETTER-1 ==========================-->
     <section id="newsletter-1" class="section-padding back-size newsletter">
@@ -1251,84 +1176,9 @@
 
 
     <!--======================= FOOTER =======================-->
-    <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
-
-        <div id="footer-top" class="banner-padding ftr-top-grey ftr-text-white">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-contact">
-                        <h3 class="footer-heading">CONTACT US</h3>
-                        <ul class="list-unstyled">
-                            <li><span><i class="fa fa-map-marker"></i></span>101b Le Huu Trac, Son Tra</li>
-                            <li><span><i class="fa fa-phone"></i></span>+00 964 988 91</li>
-                            <li><span><i class="fa fa-envelope"></i></span>kltbvcontact@gmail.com</li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-
-                    <!-- end columns -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-links ftr-pad-left">
-                        <h3 class="footer-heading">RESOURCES</h3>
-                        <ul class="list-unstyled">
-                        <li><a href="blog-listing-right-sidebar.php">Home</a></li>
-                            <li><a href="blog-listing-right-sidebar.php">Tours</a></li>
-                            <li><a href="blog.php">Blogs</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="contact.php">Contact</a></li>
-                            <li><a href="index.php">Account</a></li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-about">
-                        <h3 class="footer-heading">ABOUT US</h3>
-                        <p>We will bring you the journeys, the greatest experiences in your life. Your happiness and satisfaction are a motive power that impulse us to develop and improve. Thanks for your confidence and interaction. Hope you have a fantastic
-                            journeys!!
-                        </p>
-                        <ul class="social-links list-inline list-unstyled">
-                            <li><a href="https://www.facebook.com/"><span><i class="fa fa-facebook"></i></span></a></li>
-                            <li><a href="https://twitter.com/"><span><i class="fa fa-twitter"></i></span></a></li>
-                            <li><a href="https://google.com/"><span><i class="fa fa-google-plus"></i></span></a></li>
-                            <li><a href="https://pinterest.com/"><span><i class="fa fa-pinterest-p"></i></span></a></li>
-                            <li><a href="https://instagram.com/"><span><i class="fa fa-instagram"></i></span></a></li>
-                            <li><a href="https://linkedin.com/"><span><i class="fa fa-linkedin"></i></span></a></li>
-                            <li><a href="https://youtube.com/"><span><i class="fa fa-youtube-play"></i></span></a></li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end footer-top -->
-
-        <div id="footer-bottom" class="ftr-bot-black">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="copyright">
-                        <p>© 2023 <a href="index.php">Traveldana</a>. All rights reserved.</p>
-                    </div>
-                    <!-- end columns -->
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="terms">
-                        <ul class="list-unstyled list-inline">
-                            <li><a href="index.php">Terms & Condition</a></li>
-                            <li><a href="index.php">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <!-- end columns -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </div>
-        <!-- end footer-bottom -->
-
-    </section>
+   <?php
+   @include('footer.php');
+   ?>
     <!-- end footer -->
 
 

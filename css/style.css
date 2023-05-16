@@ -3720,7 +3720,7 @@ h6,
 }
 
 .comment-block {
-    margin-bottom: 85px;
+    margin-bottom: 2px;
 }
 
 .comment-block .user-img {
@@ -3734,7 +3734,7 @@ h6,
 }
 
 .comment-block .user-text ul .user-name {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
@@ -3752,24 +3752,24 @@ h6,
 }
 
 .comment-block .user-text ul .date {
-    font-size: 16px;
+    font-size: 8px;
     padding-left: 10px;
 }
 
 .comment-block .user-text p {
-    font-size: 14px;
+    font-size: 10px;
     margin-top: 12px;
     margin-bottom: 20px;
     line-height: 1.43em;
 }
 
 .comment-block .user-text a {
-    font-size: 15px;
+    font-size: 10px;
     text-decoration: none;
 }
 
 .comment-block .user-text .fa {
-    font-size: 18px;
+    font-size: 12px;
     margin-right: 10px;
 }
 
@@ -3807,6 +3807,7 @@ h6,
     margin-top: 35px;
     padding: 7px 40px;
 }
+
 
 
 /************** DASHOBARD ***************/
