@@ -189,9 +189,20 @@
                                             <td>$name</td>
                                             <td>$from_to</td>
                                             <td>$price $</td>  
+<<<<<<< HEAD
                                             <td>
                                             <td><a href='payment.php?idd=$idd'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
                                           
+=======
+
+                                            <td>
+                                            <form method='POST' target='_blank' enctype='application/x-www-form-urlencoded' action='./paymentMomo.php?id=$idd'>
+                                                <input  class='btn btn-success bt' type='submit' name='momo' value='PAY'>
+                                            </form></td>           
+
+                                            <td><a href='payment.php?idd=$idd'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
+
+>>>>>>> e006282b5ed76b252cdcf46a12b765d15a3f5dec
                                             <td><a href='delete_cart.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
                                         </tr>
                                         ";
