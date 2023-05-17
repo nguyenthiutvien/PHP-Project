@@ -113,7 +113,7 @@
                     <h1 class="page-title">Cart</h1>
                     <ul class="breadcrumb">
                         <li><a href="index.php">Home</a></li>
-                        <li class="active">My Cart</li>
+                        <li class="active">HISTORY</li>
                     </ul>
                 </div>
                 <!-- end columns -->
@@ -124,7 +124,7 @@
     </section>
 
     <!-- end page-cover -->
-    <h1 class="text-center"><b>MY CART</b></h1>
+    <h1 class="text-center"><b>HISTORY</b></h1>
     <div class="container">
         <div class="container">
             <table id="cart" class="table table-hover table-condensed">
@@ -191,7 +191,7 @@
                                             <td><img src='images/$image' height='200' width='250'></td>
                                             <td>$name</td>
                                             <td>$from_to</td>
-                                            <td>$price $</td>  
+                                            <td>$price </td>  
                                             <td>$status</td>  
                                             <td><a href='delete_history.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
                                         </tr>
@@ -204,7 +204,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>             
-                                            <td>$total $</td>
+                                            <td>$total </td>
                                         </tr>
                                     ";
                         ?>
