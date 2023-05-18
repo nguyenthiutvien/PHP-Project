@@ -1047,7 +1047,7 @@
                             </thead>
                             <tbody class="text-center">
                             <?php
-                            
+                            error_reporting(0);
                             $email=null;
                             $link=new mysqli("localhost","root","","traveldana");
                                $queryquery = "select * from cart";
@@ -1072,7 +1072,7 @@
                                             <td>$name</td>
                                             <td>$price</td>
                                             <td>$status</td>
-                                            <td><a href='confirm_tour.php?id=$id_cart&id_account=$id_account' id='add' name='add' class='btn btn-success '   onclick='block()'>ADD</a></td>
+                                            <td><a href='confirm_tour.php?id=$id_cart&id_account=$id_account' id='add' name='Confirm' class='btn btn-success '   onclick='block()'>ADD</a></td>
                                         </tr>
                                         ";
                                     }

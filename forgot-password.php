@@ -141,7 +141,7 @@ if($kt==0){
                             <!-- end custom-form -->
 
                             <div class="flex-content-img custom-form-img">
-                                <img src="images/ve-dep-viet-nam-vnexpress-2-1584434502.jpg" class="img-responsive" alt="registration-img" />
+                                <img src="images/danang.jpg" class="img-responsive" alt="registration-img" />
                             </div>
                             <!-- end custom-form-img -->
                         </div>

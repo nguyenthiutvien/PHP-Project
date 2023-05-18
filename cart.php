@@ -189,7 +189,7 @@
                                             <td>$name</td>
                                             <td>$from_to</td>
                                             <td>$price</td>  
-                                            <td>
+                                         
                                             <td><a href='payment.php?idd=$idd'><button type='button' class='btn btn-success bt'>PAY</button></a></td>           
                                             <td><a href='delete_cart.php?idd=$idd'><button type='button' class='btn btn-success bt'>DELETE</button></a></td>
                                         </tr>

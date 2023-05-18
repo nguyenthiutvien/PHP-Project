@@ -40,7 +40,6 @@ public function create(){
      }
 }else{
     echo "<script>alert('Account already exists !!!')</script>";
-
 }
 }
 }

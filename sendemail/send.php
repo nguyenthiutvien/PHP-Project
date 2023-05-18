@@ -44,10 +44,10 @@ if(isset($_POST["btn"])){
                 $ms=mysqli_query($conn,$dt);
                 $dem =mysqli_num_rows($ms);
                 if($dem>0){
-                    echo "<script> alert('Bạn đã đăng nhập thành công!') </script>";
+                    echo "<script> alert('successful login!') </script>";
                 }
                 else{
-                    echo "<script> alert('Email không tồn tại_Vui lòng nhập lại!') </script>";
+                    echo "<script> alert('Email does not exist_Please re-enter!') </script>";
                 }
             }
         }

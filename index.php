@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <title>TRAVEL DANA</title>
     <meta charset="utf-8">
@@ -88,8 +87,6 @@
                             <li>
                             <form>
                                     <ul class="list-inline">
-                                        
-                                        
                                         <li>
                                             <a id="ten"><span><i class="fa fa-circle blackiconcolor"></i></span>
                                                 <?php
@@ -309,8 +306,6 @@
     </section>
     <!-- end flexslider-container -->
 
-
-
    <!--=============== TOUR OFFERS ===============-->
    <section id="tour-offers" class="section-padding">
         <div class="container">
@@ -364,7 +359,6 @@
                         <h2>Specials Offers</h2>
                         <hr class="heading-line" />
                     </div>
-                  
 
                     <div class="owl-carousel owl-theme owl-custom-arrow" id="owl-tour-offers">
                         <?php

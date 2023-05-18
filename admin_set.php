@@ -5,7 +5,6 @@ class database{
     protected $password ='';
     protected $database = "traveldana";
     protected $link;
-
     public function __construct()
     {
         try {

@@ -230,7 +230,7 @@ if (!empty($rows)) {
                                 <div class="side-bar-block main-block ad-block">
                                     <div class="main-img ad-img">
                                         <a href="#">
-                                            <img src="images/thang6dalat.png" class="img-responsive" alt="car-ad" />
+                                            <img src="images/image20.png" class="img-responsive" alt="car-ad" />
                                             <div class="ad-mask">
                                                 <div class="ad-text">
                                                     <span>Luxury</span>
