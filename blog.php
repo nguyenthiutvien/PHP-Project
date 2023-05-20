@@ -162,7 +162,7 @@ if (!empty($rows)) {
                             
                      
             
-                    <a href='comments.php?id_blog=$id_blog' class='write_comment_btn'>Write Comment</a>
+                    
                 </div>
                 <!-- end blog-post-detail -->
             </div>

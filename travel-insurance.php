@@ -25,13 +25,8 @@
 
 <body>
 
-
-
-
-    <!--======== SEARCH-OVERLAY =========-->
-
   <?php
-  @include("header.php")
+  @include('header.php')
   ?>
 
 
@@ -175,7 +170,7 @@
                                     <div class="c-list">
                                         <div class="icon"><span><i class="fa fa-envelope"></i></span></div>
                                         <div class="text">
-                                            <p>taitai@gmail.com</p>
+                                            <p>ktlbvteam@gmail.com</p>
                                         </div>
                                     </div>
                                     <!-- end c-list -->
@@ -183,7 +178,7 @@
                                     <div class="c-list">
                                         <div class="icon"><span><i class="fa fa-phone"></i></span></div>
                                         <div class="text">
-                                            <p>033 449 222</p>
+                                            <p>042 292 222</p>
                                         </div>
                                     </div>
                                     <!-- end c-list -->
@@ -291,7 +286,7 @@
 
     <!--======================= FOOTER =======================-->
   <?php
-  @include ("footer.php");
+  @include('footer.php');
   ?>
     <!-- end footer -->
 

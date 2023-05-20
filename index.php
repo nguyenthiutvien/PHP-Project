@@ -157,13 +157,8 @@
             <div class="collapse navbar-collapse" id="myNavbar1">
 
                 <ul class="nav navbar-nav navbar-right navbar-search-link">
-                    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span><i class="fa fa-angle-down"></i></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="active"><a href="index.php">Main Homepage</a></li>
-                            <li><a href="allTour.php">Tour Homepage</a></li>
-                            <li><a href="allTour.php">Sports Tour Homepage</a></li>
-                            
-                        </ul>
+                    <li class="dropdown active"><a href="#" class="dropdown-toggle" data-toggle="dropdown">HOME<span></span></a>
+                        
                     </li>
                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tours<span><i class="fa fa-angle-down"></i></span></a>
                         <ul class="dropdown-menu">
@@ -190,6 +185,7 @@
                             <li><a href="forgot-password.php">Forgot Password Homepage</a></li>
                         </ul>
                     </li>
+
                     <li><a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a></li>
                 </ul>
             </div>
@@ -476,7 +472,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <a href="booking.php?id=' . $id_hot . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                        <a href="booking_hot.php?id=' . $id_hot . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -713,7 +709,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <a href="booking.php?id=' . $id_sport . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
+                                                <a href="booking_sport.php?id=' . $id_sport . '"><button type="button" class="btn btn-primary" onclick="">Add to cart</button></a>
                                             </div>
                                         </div>
                                     </div>

@@ -106,7 +106,7 @@ if (isset($_GET['id_blog'])) {
         // Các biến POST tồn tại, hãy chèn một nhận xét mới vào bảng nhận xét MySQL (biểu mẫu do người dùng gửi)
         $stmt = $pdo->prepare('INSERT INTO comments (id_blog, parent_id, name, content, submit_date) VALUES (?,?,?,?,NOW())');
         $stmt->execute([ $_GET['id_blog'], $_POST['parent_id'], $_POST['name'], $_POST['content'] ]);
-        exit('Your comment has been submitted!');
+        header('Location: blog.php');
     }
     // Get all comments by the Page ID ordered by the submit date
     $stmt = $pdo->prepare('SELECT * FROM comments WHERE id_blog = ? ORDER BY submit_date DESC');

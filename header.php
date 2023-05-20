@@ -173,13 +173,8 @@
                 <!-- end close-btn -->
 
                 <div class="list-group panel">
-                <a href="#flight-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span><i class="fa fa-chevron-down arrow"></i></span></a>
-                    <div class="collapse sub-menu" id="home-links">
-                        <a href="index.php" class="list-group-item active">Main Homepage</a>
-                        <a href="allTour.php" class="list-group-item">Tour Homepage</a>
-                        <a href="allTour.php" class="list-group-item">Sports Tour Homepage</a>
-                     
-                    </div>
+                <a href="#flight-links" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-home link-icon"></i></span>Home<span></i></span></a>
+                    
                     
                     <a href="#cruise-links" class="list-group-item" data-toggle="collapse" data-parent="#main-menu"><span><i class="fa fa-ship link-icon"></i></span>Tours<span><i class="fa fa-chevron-down arrow"></i></span></a>
                     <div class="collapse sub-menu" id="cruise-links">
